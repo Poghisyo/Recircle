@@ -3,4 +3,6 @@ class Material < ApplicationRecord
 
   has_many :purchase
   validates :title, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
