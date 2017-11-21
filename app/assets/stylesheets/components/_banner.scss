@@ -1,7 +1,7 @@
 .big-banner {
   color: white;
   text-align: center;
-  height: 100vh;
+  height: 60vh;
   background-size: cover !important;
   display: flex;
   align-items: center;
@@ -23,5 +23,14 @@
   font-weight: lighter;
   color: white;
   font-weight: lighter;
+}
 
+.baby-banner {
+  color: white;
+  height: 40vh;
+  text-align: center;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
