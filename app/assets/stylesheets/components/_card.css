@@ -28,10 +28,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: $blue-purple;
+    font-size: 15px;
 }
     a:hover {
-        color: #2980b9;
+      color: $orange;
+      text-decoration: none;
     }
 
 h2 {
@@ -39,17 +41,12 @@ h2 {
     margin-bottom: 1.6rem;
 }
 
-.wrapper {
-    max-width: 400px;
-    margin: 50px auto;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 .cards-container {
   flex: 1 0 60%;
   padding: 10px;
 }
+
+
 
 /**
  * Helpers
@@ -74,6 +71,14 @@ h2 {
     background-color: #fff;
     margin-bottom: 1.6rem;
 }
+ .card:hover,
+    .card:focus {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+    }
 
 .card__padding {
     padding: 1.6rem;
@@ -84,31 +89,55 @@ h2 {
     background-color: #eee;
 }
     .card__image img {
-        width: 100%;
-        max-width: 100%;
-        display: block;
+      position: relative;
+      opacity: 0.95;
+      width: 100%;
+      max-width: 100%;
+      display: block;
     }
 
 .card__content {
     position: relative;
 }
 
-/* card meta */
-.card__meta time {
-    font-size: 1.5rem;
-    color: #bbb;
-    margin-left: 0.8rem;
+.card__date__image {
+    z-index:100;
+    position:absolute;
+    color:$blue;
+    font-size:15px;
+    font-weight:bold;
+    top: 0;
+    right: 15px;
+    font-weight: 900;
 }
 
-/* card article */
-.card__article a {
-    text-decoration: none;
-    color: #444;
-    transition: all 0.5s ease;
+.card__text__image {
+    left:25px;
+    top: 15px;
+    position: absolute;
+    margin: 0;
+    line-height: 30px;
+    font-weight:bolder;
+    color:$blue;
 }
-    .card__article a:hover {
+
+.card__description p {
+  font-size:15px;
+  text-decoration: none;
+  color: #444;
+  transition: all 0.5s ease;
+}
+    .card__description p:hover {
         color: #2980b9;
     }
+
+.card__footer__left{
+  float:left;
+}
+
+.card__footer__right{
+  float:right;
+}
 
 /* card action */
 .card__price {
@@ -116,6 +145,7 @@ h2 {
     padding-right: 1.6rem;
     padding-left: 1.6rem;
     padding-bottom: 1.6rem;
+    font-size: 16px;
 }
 
 .card__share {
@@ -140,21 +170,25 @@ h2 {
         transform: translateZ(0);
         transform: translateX(-48px);
         transition: transform 0.35s ease;
+        opacity:0.9;
     }
 
 .share-toggle {
     z-index: 2;
+    text-decoration: none;
 }
 .share-toggle:before {
     content: "\f1e0";
     font-family: 'FontAwesome';
-    color: #3498db;
+    color: $blue;
 }
     .share-toggle.share-expanded:before {
-        content: "\f00d";
+      text-decoration: none;
+      content: "\f00d";
     }
 
 .share-icon {
+    text-decoration: none;
     display: inline-block;
     width: 48px;
     height: 48px;
@@ -164,10 +198,13 @@ h2 {
     background-color: #fff;
     transition: all 0.3s ease;
     outline: 0;
-    background-color: $blue;
+    background-color: $yellow;
+    opacity: 1;
+    text-decoration: none;
 }
     .share-icon:hover,
     .share-icon:focus {
+      text-decoration: none;
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
