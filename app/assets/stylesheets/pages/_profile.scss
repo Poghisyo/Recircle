@@ -1,5 +1,20 @@
 .profile-container {
   // background-color: $off-white;
+  margin: 0px 50px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-photo {
+  min-width: 20%;
+}
+
+.profile-infos {
+  min-width: 70%;
+
 }
 
 .profile-element {
