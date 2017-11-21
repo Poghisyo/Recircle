@@ -1,5 +1,5 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
-@import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
+
 /*
 *  Basic Reset
 */
@@ -44,6 +44,11 @@ h2 {
     margin: 50px auto;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.cards-container {
+  flex: 1 0 60%;
+  padding: 10px;
 }
 
 /**
@@ -168,26 +173,4 @@ h2 {
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2);
-    }
-
-.facebook {
-    background-color: #3b5998;
-}
-.twitter {
-    background-color: #00abe3;
-}
-.googleplus {
-    background-color: #d3492c;
-}
-
-.facebook,
-.twitter,
-.googleplus {
-    color: #fff;
-}
-
-    .facebook:hover,
-    .twitter:hover,
-    .googleplus:hover {
-        color: #eee;
     }
