@@ -28,9 +28,30 @@
 .baby-banner {
   color: white;
   height: 40vh;
-  text-align: center;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  position: relative;
 }
+
+.baby-banner .btn {
+      position: absolute;
+    top: 47px;
+    left: 65px;
+
+}
+
+.baby-banner h3 {
+  position: absolute;
+  left: 64px;
+  top: 60px;
+}
+
+.baby-banner h5 {
+  position: absolute;
+  left: 64px;
+  bottom: 25px;
+}
+
+
