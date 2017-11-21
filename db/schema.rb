@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 20171121125251) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "age"
+    t.string   "user_name"
+    t.string   "address"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "photo"
+    t.string   "company"
+    t.text     "description"
+    t.integer  "rating"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

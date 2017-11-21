@@ -1,0 +1,36 @@
+<h2>Edit your profile details</h2>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+
+      <%= simple_form_for(@user, url: profile_path, html: { method: :patch }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :user_name %>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :age %>
+          <%= f.input :email, autofocus: true %>
+          <%= f.input :phone_number %>
+          <%= f.input :address %>
+          <%= f.input :company %>
+          <%= f.input :description %>
+          <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+          <%= f.input :password_confirmation, required: false %>
+          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Update" %>
+        </div>
+      <% end %>
+
+
+    </div>
+  </div>
+</div>
+
+

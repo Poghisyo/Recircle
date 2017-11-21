@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <h1>Pages#home</h1>
+  <p>Landing page</p> -->
+
+  <div class="conatainer">
+    <div class="grid">
+      <div class ="side-nav-left">
+        <%= render 'shared/side-nav' %>
+      </div>
+      <div class="big-banner-top">
+        <%= render 'shared/big-banner' %>
+      </div>
+      <div class="banner-left">
+        <%= render 'shared/baby-banner' %>
+      </div>
+      <div class="banner-right">
+        <%= render 'shared/baby-banner-2' %>
+      </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="row">
+        <div id="card-title">
+          <h5><strong>New</strong>Arrivals</h5>
+        </div>
+
+      </div>
+    </div>
+  </div>
