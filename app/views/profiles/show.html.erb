@@ -1,1 +1,94 @@
-sup bitch
+<div class="container">
+  <div class="profile-container">
+    <h2>your profile details</h2>
+    <%= link_to 'Edit your Profile' , edit_profile_path, class: 'btn btn-primary' %>
+    <div class="row">
+
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Full name:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.first_name %> <%= @user.last_name %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Recircle user name:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.user_name %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Age:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.age %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Description:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.description %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Affiliated company:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.company %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>email: </p>
+        </div>
+        <div class="profile-value">
+          <%= @user.email %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Phone number: </p>
+        </div>
+        <div class="profile-value">
+          <%= @user.phone_number %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Address: </p>
+        </div>
+        <div class="profile-value">
+          <%= @user.address %>
+        </div>
+      </div>
+
+      <div class="profile-element">
+        <div class="profile-attribute">
+          <p>Profile photo:</p>
+        </div>
+        <div class="profile-value">
+          <%= @user.photo %>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>
