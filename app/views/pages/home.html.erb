@@ -4,19 +4,23 @@
   <div class="conatainer">
     <div class="grid">
       <div class ="side-nav-left">
-        <%= render 'shared/side-nav' %>
+        <%= render 'shared/nav-side-menu' %>
       </div>
       <div class="big-banner-top">
         <%= render 'shared/big-banner' %>
       </div>
       <div class="banner-left">
-        <%= render 'shared/baby-banner', material: @material %>
+        <%= render 'shared/baby-banner', material: @last_material %>
       </div>
       <div class="banner-right">
-        <%= render 'shared/baby-banner-2' %>
+        <%= render 'shared/baby-banner-2', material: @random_material %>
       </div>
     </div>
 
+
+<!-- side-nav -->
+
+<!-- cards container -->
     <div class="cards-container">
       <div class="row">
         <div id="card-title">
@@ -27,3 +31,4 @@
       </div>
     </div>
   </div>
+
