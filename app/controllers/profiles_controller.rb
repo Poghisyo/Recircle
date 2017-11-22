@@ -12,7 +12,8 @@ class ProfilesController < ApplicationController
   def update
     @user = current_user
     @user.update_attributes(user_params)
-    redirect_to profile_path
+    redirect_to dashboard_path(active: "profile")
+
   end
 
   private
