@@ -1,0 +1,53 @@
+<div class="tabs">
+  <% profile_active = 'active' if params['active'] == 'profile' || params['active'] == nil %>
+  <%= link_to dashboard_path(active: 'profile'), class: "tab #{profile_active}" do %>
+      <h3>My profile</h3>
+      <p>view my profile info</p>
+  <% end %>
+
+  <% purchases_active = 'active' if params['active'] == 'purchases' %>
+  <%= link_to dashboard_path(active: 'purchases'), class: "tab #{purchases_active}" do %>
+      <h3>My Purchases</h3>
+      <p>aquired supplies</p>
+  <% end %>
+
+  <% materials_active = 'active' if params['active'] == 'materials' %>
+  <%= link_to dashboard_path(active: 'materials'), class: "tab #{materials_active}" do %>
+      <h3>My Sales</h3>
+      <p>show me the money</p>
+  <% end %>
+
+  <% messages_active = 'active' if params['active'] == 'messages' %>
+  <%= link_to dashboard_path(active: 'messages'), class: "tab #{messages_active}" do %>
+      <h3>My Inbox</h3>
+      <p>communication is key</p>
+  <% end %>
+</div>
+
+
+<% if params['active'] == 'profile' || params['active'] ==nil %>
+  <div class="tab-content" id="profile">
+    <div class="text-center">
+      <%= render 'profiles/show', locals: { user: @user } %>
+    </div>
+  </div>
+<% elsif params['active'] == 'purchases'%>
+  <div class="tab-content" id="purchases">
+    <div class="text-center">
+      <%= render 'shared/big-banner', locals: { user: @user } %>
+    </div>
+  </div>
+<% elsif params['active'] == 'materials'%>
+  <div class="tab-content" id="materials">
+    <div class="text-center">
+      <h1>your materials ... under construction</h1>
+    </div>
+  </div>
+<% elsif params['active'] == 'messages'%>
+  <div class="tab-content" id="messages">
+    <div class="text-center">
+      <h1>your messages ... under construction</h1>
+    </div>
+  </div>
+<% end %>
+
