@@ -1,7 +1,3 @@
-<div class="profile-header-infos">
-  <h1> <%= current_user.first_name %> </h1>
-</div>
-
 <div class="tabs">
   <% profile_active = 'active' if params['active'] == 'profile' || params['active'] == nil %>
   <%= link_to dashboard_path(active: 'profile'), class: "tab #{profile_active}" do %>
