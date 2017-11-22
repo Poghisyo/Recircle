@@ -1,0 +1,28 @@
+<h1>Dashboard</h1>
+
+
+    <div class="profile-header-infos">
+      <h1> <%= current_user.first_name %> </h1>
+    </div>
+
+    <div class="tabs">
+      <a class="tab <%= 'active' if params["active"] == "profile" || params["active"] == nil%>" href="#" data-target="profile">
+        <h3>My profile</h3>
+        <p>view my profile info</p>
+      </a>
+      <a class="tab <%= 'active' if params["active"] == "purchases" %>" href="#" data-target="purchases">
+        <h3>My Purchases</h3>
+        <p>aquired supplies</p>
+      </a>
+      <a class="tab <%= 'active' if params["active"] == "rentals" %>" href="#" data-target="rentals">
+        <h3>My Sales</h3>
+        <p>show me the money</p>
+      </a>
+      <a class="tab <%= 'active' if params["active"] == "messages" %>" href="#" data-target="messages">
+        <h3>My Inbox</h3>
+        <p>communication is key</p>
+      </a>
+    </div>
+
+
+
