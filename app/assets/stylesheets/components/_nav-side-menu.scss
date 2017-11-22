@@ -16,9 +16,28 @@
 }
 
 .menu-list {
+  ul {
+    li {
+      margin: 10px 0;
+      a {
+        h5 {
+          font-size: 14px;
+          margin: 0;
+          margin-top: 16px;
+        }
+        h6 {
+          font-size: 13px;
+          margin: 0;
+          font-weight: 100;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
   padding-left: 10px;
   a {
-    font-size:14px;
+    font-size:12px;
+    font-weight: lighter;
   }
   padding-top: 5px;
 }
@@ -56,9 +75,11 @@
 .nav-side-menu .menu-content li {
   padding-left: 0px;
   // border-left: 1px solid #2e353d;
-  border-bottom: 1px solid #23282e;
-  background-color: #5c5b73;
+  // border-bottom: 1px solid #23282e;
+  // background-color: #5c5b73;
   padding: 0px 0 0 15px;
 }
 
-
+.hidden-xs .hidden-sm {
+  visibility: hidden;
+}

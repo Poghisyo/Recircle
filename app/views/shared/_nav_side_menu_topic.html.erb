@@ -1,10 +1,16 @@
-<a href="#" data-toggle="collapse" data-target="#menu-content<%= number %>"></i> <%= title %> <span class="arrow"></span></a>
+<a href="#" data-toggle="collapse" data-target="#menu-content<%= number %>">
+  <h5>
+  <%= title %>
+  </h5>
+</a>
 
 <ul id="menu-content<%= number %>" class="menu-content collapse out">
   <% items.each do |item| %>
   <li>
     <a href="#">
+      <h6>
       <%= item %>
+    </h6>
     </a>
   </li>
   <% end %>
