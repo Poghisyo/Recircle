@@ -5,5 +5,8 @@ class Material < ApplicationRecord
   has_many :purchase
   validates :title, presence: true
 
+
   geocoded_by :address
+  mount_uploader :photo, PhotoUploader
+
 end
