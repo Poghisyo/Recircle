@@ -11,7 +11,7 @@
   line-height: 50px;
   display: block;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -21,16 +21,22 @@
       margin: 10px 0;
       a {
         h5 {
-          font-size: 14px;
+          font-size: 17px;
           margin: 0;
           margin-top: 16px;
         }
         h6 {
-          font-size: 13px;
+          font-size: 15px;
           margin: 0;
           font-weight: 100;
           opacity: 0.5;
+          text-decoration: none;
         }
+
+      &:hover h6 {
+        opacity: 1;
+
+      }
       }
     }
   }
@@ -41,7 +47,9 @@
   }
   padding-top: 5px;
 }
-
+.menu-list ul li a:hover {
+  opacity: 1;
+}
 // .nav-side-menu .toggle-btn {
 //   display: none;
 // }

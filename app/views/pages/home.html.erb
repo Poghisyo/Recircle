@@ -1,7 +1,7 @@
 <!-- <h1>Pages#home</h1>
   <p>Landing page</p> -->
 
-  <div class="container">
+  <div class="container-home-zero-padding">
     <div class="grid">
       <div class ="side-nav-left hidden-xs hidden-sm">
         <%= render 'shared/nav-side-menu' %>
@@ -22,10 +22,10 @@
 
 <!-- cards container -->
 
-  <div class="cards-container-home">
+  <div class="cards-container side-padding">
     <div class="row">
       <div id="card-title">
-      <h5><strong>New</strong>Arrivals</h5>
+      <h3 class="new-arrivals"><strong>New</strong>Arrivals</h3>
       </div>
       <% @three_materials.each do |material| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
