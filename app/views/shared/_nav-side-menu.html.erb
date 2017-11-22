@@ -1,0 +1,87 @@
+<div class="nav-side-menu hidden-xs">
+  <h5 class="category">Categories</h5>
+
+  <div class="menu-list">
+    <ul>
+      <li>
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 0,
+          title: "Organic Materials",
+          items: [
+            "grass",
+            "flower cuttings",
+            "hedge trimmings"
+          ]
+        } %>
+      </li>
+
+      <li>
+
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 1,
+          title: "Construction Materials",
+          items: [
+            "nails",
+            "wiring",
+            "machine parts",
+            "rubble"
+          ]
+        } %>
+      </li>
+
+      <li>
+
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 2,
+          title: "Glass",
+          items: [
+            "bottles",
+            "broken glassware",
+            "light bulbs",
+
+          ]
+        } %>
+      </li>
+
+      <li>
+
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 3,
+          title: "Excess Food",
+          items: [
+            "leftovers",
+            "organics",
+          ]
+        } %>
+      </li>
+
+      <li>
+
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 4,
+          title: "Plastics",
+          items: [
+            "bottles",
+            "rubber",
+            "industrial plastic",
+          ]
+        } %>
+      </li>
+
+      <li>
+
+        <%= render partial: 'shared/nav_side_menu_topic', locals: {
+          number: 5,
+          title: "Paper",
+          items: [
+            "cardboard",
+            "discarded",
+          ]
+        } %>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
