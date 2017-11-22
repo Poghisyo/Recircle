@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   # Following line makes your model google-omniauthable
-  devise :omniauthable, omniauth_providers: [:google_oauth2]
+  devise :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
 
   has_many :materials
   has_many :purchases
@@ -17,15 +17,16 @@ class User < ApplicationRecord
 
 
     # Uncomment the section below if you want users to be created if they don't exist
+    byebug
     unless user
     user = User.create(
       first_name: data["first_name"],
       last_name: data["first_name"],
-      picture: data["image"],
+      photo: data["image"],
       email: data["email"],
       password: Devise.friendly_token[0,20],
       token: credentials.token,
-      refresh_token: credentials.refresh_token
+      # refresh_token: credentials.refresh_token
      )
     end
 
