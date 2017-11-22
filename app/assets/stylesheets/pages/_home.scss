@@ -22,6 +22,10 @@
     grid-row: 2 / span 1;
     grid-column: 2 / span 1;
   }
+
+  .new-arrivals {
+    padding-bottom: 25px;
+  }
 }
 
 @media(min-width: 768px) {
@@ -49,6 +53,14 @@
   .banner-right {
     grid-row: 2 / span 1;
     grid-column: 3 / span 1;
+  }
+
+    .new-arrivals {
+    padding-bottom: 25px;
+  }
+
+  .side-padding {
+    padding: 0 80px;
   }
 }
 
