@@ -6,15 +6,6 @@
   <div class="profile-content">
     <div class="profile-photo">
 
-      <% if @user.photo.class == String %>
-        <%= cl_image_tag(@user.photo,
-        width: 400, height: 300, crop: :fill) %>
-      <% elsif @user.picture == nil %>
-        <p>insert placeholder image here</p>
-      <% else %>
-        <%= image_tag @user.picture %>
-      <% end %>
-
       <% if @user.picture == nil %>
           <%= cl_image_tag(@user.photo,
           width: 400, height: 300, crop: :fill) %>
