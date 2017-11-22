@@ -1,0 +1,43 @@
+<div class="card ">
+  <div class="card__image border-tlr-radius">
+    <img src=<%= image_path("plastic_waste.jpg")%> alt="image" class="border-tlr-radius">
+      <h2 class="card__text__image">
+        <%= material.category %>
+      </h2>
+      <p class="card__date__image btn-blue-purple ">
+        <%= material.created_at.strftime("%b - %y") %>
+      </p>
+  </div>
+
+  <div class="card__content card__padding">
+    <div class="card__share">
+      <div class="card__social">
+        <a class="share-icon" href="#"><span class="fa fa-star"></span></a>
+        <a class="share-icon" href="#"><span class="fa fa-heart"></span></a>
+        <a class="share-icon" href="#"><span class="fa fa-share"></span></a>
+      </div>
+
+      <a id="share" class="share-toggle share-icon" href="#"></a>
+    </div>
+
+      <a
+        href="#"><%= material.supplier %>
+      </a>
+
+    <article class="card__description">
+      <p>
+        <%= material.title %>
+      </p>
+    </article>
+  </div>
+  <!-- <div class="footer"> -->
+  <div class="card__price">
+    <div class="card__footer__left">
+      <p><%= material.price %> EUR/unit</p>
+    </div>
+    <div class="card__footer__right ">
+      <img src=<%= image_path("add-to-cart.png")%> alt="image" class="avatar-square">
+    </div>
+  </div>
+</div>
+

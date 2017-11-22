@@ -1,0 +1,20 @@
+<!-- THIS IS THE MAIN CONTAINER (FOR CARDS & MAP) -->
+<div class="main-map-and-cards-container">
+
+  <!-- THIS IS THE CARDS CONTAINER -->
+  <div class="cards-container">
+    <div class="row">
+      <% @materials.each do |material| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render partial: 'shared/card', locals: { material: material } %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- THIS IS THE MAP -->
+    <div id="map-index"></div>
+    <%= render partial: 'shared/map', locals: { hash: @hash } %>
+
+</div>
+
