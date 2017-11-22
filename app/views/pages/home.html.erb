@@ -1,9 +1,9 @@
 <!-- <h1>Pages#home</h1>
   <p>Landing page</p> -->
 
-  <div class="conatainer">
+  <div class="container">
     <div class="grid">
-      <div class ="side-nav-left">
+      <div class ="side-nav-left hidden-xs hidden-sm">
         <%= render 'shared/nav-side-menu' %>
       </div>
       <div class="big-banner-top">
@@ -21,14 +21,18 @@
 <!-- side-nav -->
 
 <!-- cards container -->
-    <div class="cards-container">
-      <div class="row">
-        <div id="card-title">
-          <h5><strong>New</strong>Arrivals</h5>
 
-        </div>
-
+  <div class="cards-container-home">
+    <div class="row">
+      <div id="card-title">
+      <h5><strong>New</strong>Arrivals</h5>
       </div>
+      <% @three_materials.each do |material| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render partial: 'shared/card', locals: { material: material } %>
+      </div>
+      <% end %>
     </div>
   </div>
 
+</div>
