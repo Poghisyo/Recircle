@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :materials
   has_many :purchases
 
+  mount_uploader :photo, PhotoUploader
+
 
   def self.find_for_google_oauth2(oauth, signed_in_resource=nil)
     credentials = oauth.credentials
@@ -18,21 +20,22 @@ class User < ApplicationRecord
     user = User.create(
       first_name: data["first_name"],
       last_name: data["first_name"],
-      photo: data["image"],
+      picture: data["image"],
       email: data["email"],
       password: Devise.friendly_token[0,20],
       token: credentials.token,
       # refresh_token: credentials.refresh_token
      )
     end
-
+    user.picture = data["image"]
+    user.save
     user
   end
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
-    user_params[:facebook_picture_url] = auth.info.image
+    user_params[:picture] = auth.info.image
     user_params[:token] = auth.credentials.token
     user_params[:token_expiry] = Time.at(auth.credentials.expires_at)
     user_params = user_params.to_h
