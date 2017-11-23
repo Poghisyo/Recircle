@@ -1,0 +1,63 @@
+    <div class="content">
+      <div class="row">
+        <div class="col-xs-6">
+          <ul class="material-specs">
+            <li><h5><%= @material.supplier %></h5></li>
+            <li>
+              <% 4.times do  %>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <% end %>
+              <% (5 - 4).times do %>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <% end %>
+            </li>
+            <li><h4><strong>
+              <%= @material.title %>
+              </strong>
+              </h4>
+            </li>
+            <li>
+              <p>
+                <span>
+              <i class="fa fa-cog" aria-hidden="true"></i>
+              </span>
+              <%= @material.category %>
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>
+                  <i class="fa fa-euro gray" aria-hidden="true"></i>
+                </span>
+                <%=  @material.price %> per kg
+              </p>
+            </li>
+            <li>
+              <p>
+                <span>
+                  <i class="fa fa-globe gray" aria-hidden="true"></i>
+                </span>
+                <%=  @material.address %>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <!-- materials-photo -->
+          <div class="image-material-show" style="background-image:url('<%= cl_image_path "glass_rynmms", width: 300 %>');">
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="materials-about">
+            <!-- material description -->
+            <div class="materials-description">
+              <h5>About this product</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam magnam aperiam at a asperiores recusandae quo ipsa nostrum perferendis eveniet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

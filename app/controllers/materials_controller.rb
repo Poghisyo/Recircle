@@ -14,4 +14,8 @@ class MaterialsController < ApplicationController
       marker.lng material.longitude
     end
   end
+
+  def show
+    @material = Material.find(params[:id])
+  end
 end
