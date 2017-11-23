@@ -1,0 +1,35 @@
+<!-- THIS IS THE MAIN CONTAINER (FOR CARDS & MAP) -->
+<div class="main-map-and-cards-container">
+
+  <!-- THIS IS THE CARDS CONTAINER -->
+  <div class="cards-container">
+    <div class="tabs-sort">
+  <% category_active = 'active' if params['active'] == 'category' || params['active'] == nil %>
+  <%= link_to materials_path(active: 'category'), class: "tab-sort #{category_active}" do %>
+      <h2>Sort by category</h2>
+  <% end %>
+
+  <% price_active = 'active' if params['active'] == 'price' %>
+  <%= link_to materials_path(active: 'price'), class: "tab-sort #{price_active}" do %>
+      <h2>Sort by price</h2>
+  <% end %>
+
+  <% address_active = 'active' if params['active'] == 'address' %>
+  <%= link_to materials_path(active: 'address'), class: "tab-sort #{address_active}" do %>
+      <h2>Sort by location</h2>
+  <% end %>
+</div>
+    <div class="row">
+      <% @materials.each do |material| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render partial: 'shared/card', locals: { material: material } %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- THIS IS THE MAP -->
+    <div id="map-index"></div>
+    <%= render partial: 'shared/map', locals: { hash: @hash } %>
+
+</div>

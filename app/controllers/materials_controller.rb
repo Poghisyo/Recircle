@@ -2,9 +2,13 @@ class MaterialsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-  @filters = params.permit(:address)
-    if @filters.present?
-      @materials = Material.where("address ILIKE ?", "%#{@filters['address'].capitalize}%")
+  @filters = params.permit(:active)
+    if @filters['active'].present? && @filters['active'] == "address"
+      @materials = Material.order(:address)
+    elsif @filters['active'].present? && @filters['active'] == "price"
+      @materials = Material.order(:price)
+    elsif @filters['active'].present? && @filters['active'] == "category"
+      @materials = Material.order(:category)
     else
       @materials = Material.all
     end
