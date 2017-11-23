@@ -2,8 +2,8 @@
 
 <form class="navbar-form-container" action=<%= materials_path %> method="GET">
   <div class="navbar-form">
-    <input type="text" name="material" placeholder="Search">
-    <input type="text" name="address" placeholder="Location">
+    <input type="text" name="material" placeholder="Search" value="<%= @material %>">
+    <input type="text" name="address" placeholder="Location" value="<%= @address %>">
   </div>
   <button type="submit" class="btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
 </form>
