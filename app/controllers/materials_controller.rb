@@ -28,4 +28,12 @@ class MaterialsController < ApplicationController
       marker.lng material.longitude
     end
   end
+
+  def show
+    @material = Material.find(params[:id])
+    @marker_map = Gmaps4rails.build_markers(@material) do |material, marker|
+      marker.lat material.latitude
+      marker.lng material.longitude
+    end
+  end
 end
