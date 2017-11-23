@@ -44,6 +44,7 @@
   <div class="tab-content" id="purchases">
     <div class="text-center">
       <h1>your purchases ... under construction</h1>
+      <%= render 'purchases/index', locals: {purchases: @purchases} %>
     </div>
   </div>
 <% elsif params['active'] == 'materials'%>

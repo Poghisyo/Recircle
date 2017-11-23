@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: "users/omniauth_callbacks"  }
 
   root to: 'pages#home'
@@ -12,4 +13,7 @@ Rails.application.routes.draw do
 
   #As Seller
   resources :materials, only: [:index]
+
+  #As Buyer
+  resources :purchases, only: [:index, :new, :create]
 end
