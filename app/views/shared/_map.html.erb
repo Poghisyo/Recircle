@@ -1,17 +1,16 @@
 
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
+<script>
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: { id: 'map-index' } }, function() {
       markers = handler.addMarkers(<%= raw @markers_map.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
       if (markers.length == 0) {
-        handler.getMap().setZoom(2);
+        handler.getMap().setZoom(7);
       } else if (markers.length == 1) {
-        handler.getMap().setZoom(14);
+        handler.getMap().setZoom(8);
       }
     });
-  <% end %>
-
+</script>
 <% end %>

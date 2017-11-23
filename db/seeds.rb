@@ -11,8 +11,8 @@ Material.destroy_all
 User.destroy_all
 
 
-puts 'Creating 20 fake users with material...'
-20.times do
+puts 'Creating 86 fake users with material...'
+86.times do
   user = User.new({
     email: Faker::Internet.email,
     password: Faker::Vehicle.vin
@@ -21,12 +21,14 @@ puts 'Creating 20 fake users with material...'
 
   material = Material.new({
     seller: user,
-    category: Faker::Commerce.material,
+    # category: Faker::Commerce.material,
+    category: ["wood", "plastic", "paper", "glass", "organic", "construction", "food"].sample,
     title: Faker::Commerce.product_name,
     price: Faker::Number.between(20, 3000),
-    supplier: Faker::Ancient.hero,
+    supplier: Faker::Company.name,
     created_at: Faker::Date.between(20.days.ago, Date.today),
-    address: Faker::Address.city
+    # address: Faker::Address.city
+    address: ["amsterdam", "rotterdam", "leiden", "naarden", "den haag", "amstelveen", "dordrecht", "utrecht", "breda", "antwerpen", "venlo", "bilthoven"].sample
     })
   material.save!
 

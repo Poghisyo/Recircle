@@ -5,13 +5,12 @@ class MaterialsController < ApplicationController
     filters = params.permit(:active)
     @address = params[:address]
     @material = params[:material]
-
     if !@address.blank? && !@material.blank?
-      @materials = Material.where(category: @material.capitalize).where.not(latitude: nil, longitude: nil).near(@address, 200, order: false)
+      @materials = Material.where(category: @material.downcase).where.not(latitude: nil, longitude: nil).near(@address, 30, order: false)
     elsif !@address.blank?
-      @materials = Material.where.not(latitude: nil, longitude: nil).near(@address, 200, order: false)
+      @materials = Material.where.not(latitude: nil, longitude: nil).near(@address, 30, order: false)
     elsif !@material.blank?
-      @materials = Material.where(category: @material.capitalize)
+      @materials = Material.where(category: @material.downcase)
     else
       @materials = Material.where.not(latitude: nil, longitude: nil)
     end
