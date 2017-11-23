@@ -5,17 +5,26 @@
       <p>view my profile info</p>
   <% end %>
 
+  <% materials_active = 'active' if params['active'] == 'materials' %>
+  <%= link_to dashboard_path(active: 'materials'), class: "tab #{materials_active}" do %>
+      <h3>My Sales</h3>
+      <p>show me the money</p>
+  <% end %>
+
+  <% wishlist_active = 'active' if params['active'] == 'wishlist' %>
+  <%= link_to dashboard_path(active: 'wishlist'), class: "tab #{wishlist_active}" do %>
+      <h3>My Wishlist</h3>
+      <p>sweet dreams</p>
+  <% end %>
+
+
+
   <% purchases_active = 'active' if params['active'] == 'purchases' %>
   <%= link_to dashboard_path(active: 'purchases'), class: "tab #{purchases_active}" do %>
       <h3>My Purchases</h3>
       <p>aquired supplies</p>
   <% end %>
 
-  <% materials_active = 'active' if params['active'] == 'materials' %>
-  <%= link_to dashboard_path(active: 'materials'), class: "tab #{materials_active}" do %>
-      <h3>My Sales</h3>
-      <p>show me the money</p>
-  <% end %>
 
   <% messages_active = 'active' if params['active'] == 'messages' %>
   <%= link_to dashboard_path(active: 'messages'), class: "tab #{messages_active}" do %>
