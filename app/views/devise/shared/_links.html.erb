@@ -1,5 +1,19 @@
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <% if provider == :google_oauth2 %>
+      <% button_class = 'google' %>
+    <% else %>
+      <% button_class = provider %>
+    <% end %>
+
+    <%= link_to omniauth_authorize_path(resource_name, provider), class: "btn btn-block btn-#{button_class.to_s}" do %>
+       <span class="fa fa-<%= button_class %> "></span> Sign in with <%= button_class.capitalize %>
+    <% end %>
+  <% end -%>
+<% end -%>
+
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
+  <%= link_to "Go to log in page", new_session_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
@@ -18,16 +32,3 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <% if provider == :google_oauth2 %>
-      <% button_class = 'google' %>
-    <% else %>
-      <% button_class = provider %>
-    <% end %>
-
-    <%= link_to omniauth_authorize_path(resource_name, provider), class: "btn btn-block btn-#{button_class.to_s}" do %>
-       <span class="fa fa-<%= button_class %> "></span> Sign in with <%= button_class.capitalize %>
-    <% end %>
-  <% end -%>
-<% end -%>
