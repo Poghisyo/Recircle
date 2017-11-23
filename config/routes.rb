@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   #As Seller
+
   resources :materials, only: [:index]
 
   #As Buyer
   resources :purchases, only: [:index, :new, :create]
+
 end
