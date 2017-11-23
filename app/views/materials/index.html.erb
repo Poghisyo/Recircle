@@ -1,13 +1,5 @@
   <div class="tab-content" id="category">
     <div class="text-center">
-      <%= render partial: "shared/cards_and_map", locals: { materials: @materials, hash: @hash } %>
+      <%= render partial: "shared/cards_and_map", locals: { materials: @materials, markers_map: @markers_map } %>
     </div>
   </div>
-
-
-  <!-- THIS IS THE MAP -->
-    <div class="map-materials-index" id="map-index"></div>
-    <%= render partial: 'shared/map', locals: { hash: @hash } %>
-
-</div>
-

@@ -5,13 +5,12 @@ class MaterialsController < ApplicationController
     filters = params.permit(:active)
     @address = params[:address]
     @material = params[:material]
-
     if !@address.blank? && !@material.blank?
-      @materials = Material.where(category: @material.capitalize).where.not(latitude: nil, longitude: nil).near(@address, 200, order: false)
+      @materials = Material.where(category: @material.downcase).where.not(latitude: nil, longitude: nil).near(@address, 30, order: false)
     elsif !@address.blank?
-      @materials = Material.where.not(latitude: nil, longitude: nil).near(@address, 200, order: false)
+      @materials = Material.where.not(latitude: nil, longitude: nil).near(@address, 30, order: false)
     elsif !@material.blank?
-      @materials = Material.where(category: @material.capitalize)
+      @materials = Material.where(category: @material.downcase)
     else
       @materials = Material.where.not(latitude: nil, longitude: nil)
     end
@@ -32,7 +31,7 @@ class MaterialsController < ApplicationController
 
   def show
     @material = Material.find(params[:id])
-    @hash = Gmaps4rails.build_markers(@material) do |material, marker|
+    @marker_map = Gmaps4rails.build_markers(@material) do |material, marker|
       marker.lat material.latitude
       marker.lng material.longitude
     end
