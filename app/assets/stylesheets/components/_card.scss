@@ -15,6 +15,7 @@
 .cards-container {
   flex: 1 0 60%;
   padding: 10px;
+  padding-top: 0px;
 }
 
 /**
@@ -25,7 +26,7 @@
   border-top-right-radius: 2px;
 }
 
-.text-center { text-align: center; }
+// .text-center { text-align: center; }
 
 .radius { border-radius: 2px; }
 
