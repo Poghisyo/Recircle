@@ -37,7 +37,7 @@
 <% if params['active'] == 'profile' || params['active'] ==nil %>
   <div class="tab-content" id="profile">
     <div class="text-center">
-      <%= render 'profiles/show', locals: { user: @user } %>
+      <%= render 'profiles/new-show', locals: { user: @user } %>
     </div>
   </div>
 <% elsif params['active'] == 'purchases'%>
