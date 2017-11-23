@@ -17,5 +17,9 @@ class MaterialsController < ApplicationController
 
   def show
     @material = Material.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@material) do |material, marker|
+      marker.lat material.latitude
+      marker.lng material.longitude
+    end
   end
 end
