@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
 
   def update
     @user = current_user
+    byebug
     unless user_params[:photo].nil?
       Cloudinary::Uploader.upload(user_params[:photo])
     end

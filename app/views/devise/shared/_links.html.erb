@@ -20,6 +20,15 @@
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+  <% byebug %>
+    <% if provider == :google_oauth2 %>
+      <% button_class = 'google' %>
+    <% else %>
+      <% button_class = provider %>
+    <% end %>
+
+    <%= link_to omniauth_authorize_path(resource_name, provider), class: "btn btn-block btn-#{button_class.to_s}" do %>
+       <span class="fa fa-<%= button_class %> "></span> Sign in with <%= button_class.capitalize %>
+    <% end %>
   <% end -%>
 <% end -%>
