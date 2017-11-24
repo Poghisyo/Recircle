@@ -1,0 +1,24 @@
+<h2>Post a new material for sale</h2>
+
+<%= simple_form_for(@material) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :user_id , as: :hidden%>
+    <%= f.input :title, required: true, autofocus: true %>
+    <%= f.input :category %>
+    <%= f.input :price %>
+    <%= f.input :condition %>
+    <%= f.input :quantity %>
+    <%= f.input :description %>
+    <%= f.input :source %>
+    <%= f.input :supplier %>
+    <%= f.input :address %>
+    <%= f.input :lead_time %>
+    <%= f.input :photo %>
+  </div>
+
+  <div class="form-actions login-button">
+    <%= f.button :submit, "Post for sale", class: "btn btn-primary" %>
+  </div>
+<% end %>
