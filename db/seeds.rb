@@ -27,6 +27,7 @@ puts 'Creating 86 fake users with material...'
     price: Faker::Number.between(20, 3000),
     supplier: Faker::Company.name,
     created_at: Faker::Date.between(20.days.ago, Date.today),
+    description: Faker::Lorem.paragraph,
     # address: Faker::Address.city
     address: ["amsterdam", "rotterdam", "leiden", "naarden", "den haag", "amstelveen", "dordrecht", "utrecht", "breda", "antwerpen", "venlo", "bilthoven"].sample
     })
