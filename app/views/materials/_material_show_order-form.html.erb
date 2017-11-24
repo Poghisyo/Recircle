@@ -1,2 +1,10 @@
-<div class="order-form"></div>
+<div class="order-form">
+<h4>Buy this Product:</h4>
+<p>Expected lead time:</p>
+<p>Total price</p>
+
+<%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post  %>
+
+
+</div>
 

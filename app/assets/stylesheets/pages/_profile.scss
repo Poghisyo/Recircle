@@ -5,35 +5,33 @@
 
 .profile-content {
   display: flex;
-  justify-content: space-between;
+  padding-left: 20px;
 }
 
 .profile-photo {
-  min-width: 20%;
+  min-width: 30%;
 }
 
 .profile-infos {
   min-width: 70%;
+  flex-grow: 1;
+}
 
+.profile-attribute {
+  text-align: left;
+  font-weight: bold;
+  min-width: 250px
+}
+
+.profile-value {
+  text-align: left;
+  flex-grow: 1;
 }
 
 .profile-element {
   background-color: white;
-  margin: 0px;
-  padding: 20px;
-  border-bottom: 1px solid rgba(1,1,1,0.2);
+
   display: flex;
   align-content: center;
   justify-content: space-between;
-}
-
-.profile-attribute {
-  font-weight: bold;
-  min-width: 200px;
-}
-.profile-value {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-grow: 1;
 }

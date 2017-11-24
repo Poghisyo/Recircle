@@ -37,13 +37,14 @@
 <% if params['active'] == 'profile' || params['active'] ==nil %>
   <div class="tab-content" id="profile">
     <div class="text-center">
-      <%= render 'profiles/show', locals: { user: @user } %>
+      <%= render 'profiles/new-show', locals: { user: @user } %>
     </div>
   </div>
 <% elsif params['active'] == 'purchases'%>
   <div class="tab-content" id="purchases">
     <div class="text-center">
       <h1>your purchases ... under construction</h1>
+      <%= render 'purchases/index', locals: {purchases: @purchases} %>
     </div>
   </div>
 <% elsif params['active'] == 'materials'%>
