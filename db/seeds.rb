@@ -1,10 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require "cloudinary"
+include CloudinaryHelper
 
 puts 'cleaning database'
 Purchase.destroy_all
@@ -19,11 +14,36 @@ puts 'Creating 86 fake users with material...'
     password: Faker::Vehicle.vin
     })
   user.save!
+  category = ["grass", "flower cuttings", "hedge trimmings", "nails", "wiring", "machine parts", "rubble", "glass bottles", "broken glassware", "light bulbs", "leftovers", "organics", "plastic bottles", "rubber", "industrial plastic", "cardboard", "discarded paper", "woodchips", "unrefined wood", "sawdust"].sample
 
+  photos = {
+    # "grass" => "https://static.pexels.com/photos/7174/summer-grass.jpg",
+    "grass" => cl_image_path("grass_jkmdtq.jpg"),
+    "flower cuttings" => cl_image_path("flower_cuttings_kg2cvs.jpg"),
+    "hedge trimmings" => cl_image_path("hedge_trimmings_dw9js7.webp"),
+    "nails" => cl_image_path("construction_metals_jl0vug.jpg"),
+    "wiring" => cl_image_path("wiring_ddyc2g.jpg"),
+    "machine parts" => cl_image_path("machine_parts_ujvrla.jpg"),
+    "rubble" => cl_image_path("rubble_zuf5rm.jpg"),
+    "glass bottles" => cl_image_path("glass_bottles_oew8ia.jpg"),
+    "broken glassware" => cl_image_path("broken_glassware_icqiey.jpg"),
+    "light bulbs" => cl_image_path("lightbulbs_x0hnu1.jpg"),
+    "leftovers" => cl_image_path("leftovers_eixwvx.jpg"),
+    "organics" => cl_image_path("organics_eyqvz0.jpg"),
+    "plastic bottles" => cl_image_path("plastic_bottle_upv8eo.jpg"),
+    "rubber" => cl_image_path("rubber_jc0nky.jpg"),
+    "industrial plastic" => cl_image_path("plastics_x653mc.jpg"),
+    "cardboard" => cl_image_path("paper_zor1pd.jpg"),
+    "discarded paper" => cl_image_path("discarded_paper_xdmz9p.jpg"),
+    "woodchips" => cl_image_path("woodchips_bc2sjp.jpg"),
+    "unrefined wood" => cl_image_path("unrefined_wood_c7ozzv.jpg"),
+    "sawdust" => cl_image_path("wood_xx4umq.jpg")
+  }
   material = Material.new({
     seller: user,
     # category: Faker::Commerce.material,
-    category: ["wood", "plastic", "paper", "glass", "organic", "construction", "food"].sample,
+    category: category,
+    remote_photo_url: photos[category],
     title: Faker::Commerce.product_name,
     price: Faker::Number.between(20, 3000),
     supplier: Faker::Company.name,
