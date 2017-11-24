@@ -1,49 +1,7 @@
     <div class="content">
       <div class="row">
         <div class="col-xs-6">
-          <ul class="material-specs">
-
-            <li><h4><strong>
-              <%= @material.title %>
-              </strong>
-              </h4>
-            </li>
-            <li><h5><%= @material.supplier %></h5></li>
-            <li>
-              <% 4.times do  %>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <% end %>
-              <% (5 - 4).times do %>
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-              <% end %>
-            </li>
-            <ul class="padding-text">
-            <li>
-              <p>
-                <span>
-              <i class="fa fa-cog" aria-hidden="true"></i>
-              <%= @material.category %>
-              </span>
-              </p>
-            </li>
-            <li>
-              <p>
-                <span>
-                  <i class="fa fa-euro gray" aria-hidden="true"></i>
-                </span>
-                <%=  @material.price %> per kg
-              </p>
-            </li>
-            <li>
-              <p>
-                <span>
-                  <i class="fa fa-globe gray" aria-hidden="true"></i>
-                </span>
-                <%=  @material.address %>
-              </p>
-            </li>
-            </ul>
-          </ul>
+          <%= render partial: 'material_show_specs' %>
         </div>
         <div class="col-xs-6">
           <!-- materials-photo -->
@@ -62,12 +20,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-md-6">
 
-          <div class="map-materials-show" id="map-index">
-          <%= render partial: 'shared/map', locals: {markers_map: @markers_map} %>
-        </div>
-        </div>
 
       </div>
     </div>
