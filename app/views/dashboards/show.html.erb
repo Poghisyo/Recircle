@@ -43,7 +43,6 @@
 <% elsif params['active'] == 'purchases'%>
   <div class="tab-content" id="purchases">
     <div class="text-center">
-      <h1>your purchases ... under construction</h1>
       <%= render 'purchases/index', locals: {purchases: @purchases} %>
     </div>
   </div>
@@ -51,6 +50,7 @@
   <div class="tab-content" id="materials">
     <div class="text-center">
       <h1>your materials ... under construction</h1>
+      <%= link_to 'Post a new material', new_material_path, class: 'btn btn-primary' %>
     </div>
   </div>
 <% elsif params['active'] == 'messages'%>

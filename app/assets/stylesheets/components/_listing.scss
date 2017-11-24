@@ -1,0 +1,57 @@
+.listing-body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.listing {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(1,1,1,0.2);
+  padding-top: 20px;
+  h4 {
+    margin-top: 0px;
+  }
+  &:first-child {
+    border-top: 1px solid rgba(1,1,1,0.2);
+  }
+}
+
+.listing-image {
+  width: 200px;
+  height: 200px;
+}
+
+.listing-name {
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+.listing-description {
+  max-width: 35%;
+  flex-grow: 1;
+}
+
+.listing-price {
+  min-width: 150px;
+}
+
+.listing-info {
+  min-width: 150px;
+}
+
+.listing-status {
+  min-width: 150px;
+}
+
+.status.accepted {
+  color: $flat-green;
+}
+.status.declined {
+  color: $flat-red;
+}
+.status.pending {
+  color: $flat-blue;
+}

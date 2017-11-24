@@ -37,4 +37,22 @@ class MaterialsController < ApplicationController
     end
     @purchase = Purchase.new
   end
+
+  def new
+    @material = Material.new
+  end
+
+  def create
+    @material = Material.new(materials_params)
+    @material.status = 'For Sale'
+    @material.seller = current_user
+    @material.save!
+    redirect_to dashboard_path(active: 'materials')
+  end
+
+  private
+
+  def materials_params
+    params.require(:material).permit(:user_id, :title, :category, :status, :address, :condition, :photo, :source, :supplier, :price, :quantity, :lead_time, :description)
+  end
 end

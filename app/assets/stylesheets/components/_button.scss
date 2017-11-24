@@ -1,7 +1,7 @@
 .btn-red {
   color: white;
   background-color: $flat-red;
-  font-size: 10px;
+  font-size: 20px;
   padding: 2px 7px;
 }
 
@@ -36,4 +36,17 @@
 
 .login-button {
   margin-bottom: 7px;
+}
+
+.btn-order {
+  color: black;
+  background-color:#FFD131;
+  padding: 10px 80px;
+  border-radius: 1px;
+  font-size: 20px;
+}
+
+.padding-text {
+  padding-top: 20px;
+  font-weight: 200;
 }

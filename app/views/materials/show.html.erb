@@ -1,32 +1,24 @@
-<div class="wrapper">
-  <div class="container-home-zero-padding">
 
-    <div class="row">
-      <div class="col-xs-12 col-md-2">
-        <%= render partial: 'shared/nav-side-menu' %>
+
+
+<div class="container-home-zero-padding">
+    <div class="grid-show">
+      <div class ="side-nav-left hidden-xs hidden-sm">
+        <%= render 'shared/nav-side-menu' %>
       </div>
-      <div class="show-container">
-        <!-- left-side -->
-
-        <div class="col-xs-12 col-sm-8 col-md-7 no-gutter">
-          <%= render partial: 'material_show_content' %>
-
-
-
-        </div>
-
-        <!-- right side -->
-        <div class="col-xs-12 col-sm-4 col-md-3 no-gutter">
-          <%= render partial: 'material_show_order-form', locals: { material: @material } %>
-
-
-        </div>
-
+      <div class="material-specs">
+        <%= render 'material_show_specs' %>
       </div>
-
+      <div class="material-show-order">
+        <%= render 'material_show_order-form' %>
+      </div>
+      <div class="material-show-photo">
+        <%= render 'material_show_photo' %>
+      </div>
+      <div class="material-show-about">
+        <%= render 'material_show_about' %>
+      </div>
+      <div class="map-materials-show" id="map-index">
+          <%= render partial: 'shared/map', locals: {markers_map: @markers_map} %>
+        </div>
     </div>
-
-
-    </div>
-  </div>
-</div>
