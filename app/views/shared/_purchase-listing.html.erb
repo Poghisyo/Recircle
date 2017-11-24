@@ -1,0 +1,42 @@
+<div class="listing-container">
+  <div class="row">
+    <div class="listing-body">
+        <div class="listing">
+          <div class="listing-image">
+            <% if material.photo? %>
+              <%= cl_image_tag material.photo, class: 'listing-photo'%>
+            <% else %>
+              <p>---- insert placeholder image here ---</p>
+            <% end %>
+          </div>
+          <div class="listing-name">
+            <h3><%= material.title %></h3>
+            <%= material.category %>
+          </div>
+
+          <div class="listing-description">
+            <%= material.description %>
+          </div>
+
+          <div class="listing-price">
+            <p>
+              <strong><%= material.price %></strong> EUR
+            </p>
+          </div>
+
+          <div class="listing-info">
+            <p>
+              <%= material.address %>
+            </p>
+          </div>
+
+
+          <div class="listing-status">
+            <%= purchase.status %>
+          </div>
+
+              <%= link_to "", material_path(material), class: "listing-link"  %>
+        </div>
+    </div>
+  </div>
+</div>

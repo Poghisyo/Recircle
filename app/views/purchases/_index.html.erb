@@ -1,2 +1,8 @@
-<h1>Purchases#index</h1>
-<p>Find me in app/views/purchases/index.html.erb</p>
+<h1>My Purchases</h1>
+
+
+<% if @purchases %>
+  <% @purchases.each do |purchase| %>
+  <%= render partial: 'shared/purchase-listing', locals: { material: purchase.material, purchase: purchase} %>
+  <% end %>
+<% end %>

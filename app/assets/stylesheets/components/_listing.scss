@@ -1,0 +1,21 @@
+.listing-body {
+  display: flex;
+  justify-content: center;
+}
+
+.listing {
+  min-width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.listing-name {
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+.listing-image {
+  width: 200px;
+  height: 200px;
+}
