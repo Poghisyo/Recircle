@@ -1,6 +1,6 @@
 <div class="card ">
   <div class="card__image border-tlr-radius">
-    <div class="image-card order-tlr-radius" style="background-image: url('<%= image_path("plastic_waste.jpg")%>');"></div>
+    <div class="image-card order-tlr-radius" style="background-image: url('<%= cl_image_path(material.photo)%>');"></div>
     <!-- linear-gradient(-225deg, rgba(40,40,40,0.6) 0%, rgba(40,40,40,0.6) 50%), -->
       <h2 class="card__text__image">
         <%= material.category %>
