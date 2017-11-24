@@ -19,12 +19,14 @@
           </div>
 
           <div class="listing-price">
+            <h4>Price:</h4>
             <p>
               <strong><%= material.price %></strong> EUR
             </p>
           </div>
 
           <div class="listing-info">
+            <h4>Location:</h4>
             <p>
               <%= material.address %>
             </p>
@@ -32,7 +34,8 @@
 
 
           <div class="listing-status">
-            <%= purchase.status %>
+            <h4>Purchase status:</h4>
+            <h4 class="status pending"><%= purchase.status %></h4>
           </div>
 
               <%= link_to "", material_path(material), class: "listing-link"  %>
