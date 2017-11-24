@@ -5,10 +5,9 @@
 /* We just give you a Gmaps with random width/height */
 
 
-
-.map-materials-index {
-    flex-grow: 1;
-  height: 91vh;
+#map-index {
+  flex-grow: 1;
+  height: 85vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 55px !important;
   flex: 0 0 450px;
