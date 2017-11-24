@@ -3,14 +3,8 @@
 <p>Expected lead time:</p>
 <p>Total price</p>
 
-<%= link_to 'Buy', purchases_path, {method: :post}  %>
+<%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post  %>
 
-
-<%= simple_form_for(@material, url: purchases_path, html: { method: :put }) do |f| %>
-
-  <%= f.input :material, as: :hidden %>
-  <%= f.submit %>
-<% end %>
 
 </div>
 
