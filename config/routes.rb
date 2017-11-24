@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: "users/omniauth_callbacks"  }
 
   root to: 'pages#home'
@@ -11,5 +12,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   #As Seller
+
   resources :materials, only: [:index, :show]
+
+  #As Buyer
+  resources :purchases, only: [:index, :new, :create]
+
 end

@@ -35,5 +35,6 @@ class MaterialsController < ApplicationController
       marker.lat material.latitude
       marker.lng material.longitude
     end
+    @purchase = Purchase.new
   end
 end
