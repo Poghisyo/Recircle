@@ -1,7 +1,7 @@
 <div class="baby-banner" style="background-image: linear-gradient(
   rgba(0, 0, 0, 0.2),
   rgba(0, 0, 0, 0.2)
-  ), url(<%= image_path('construction_metals.jpg'); %>">
+  ), url('<%= cl_image_path(@last_material.photo)%>'); %>">
 
   <div class="baby-banner-content">
     <button type="submit" class="btn btn-red">NEW</button>
