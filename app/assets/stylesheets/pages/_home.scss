@@ -31,7 +31,7 @@
 @media(min-width: 768px) {
   .grid {
     display: grid;
-    grid-template-columns: 150px 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-rows:  60% 40%;
   }
 
@@ -55,13 +55,28 @@
     grid-column: 3 / span 1;
   }
 
-    .new-arrivals {
+  .new-arrivals {
     padding-bottom: 25px;
   }
 
   .side-padding {
     padding: 0 80px;
   }
+
+  .bottom-container {
+    display: flex;
+  }
+  .nav-flex {
+    flex: 0 0 200px;
+  }
+  cards-flex {
+    flex: 1 0 auto;
+  }
+  .home-padding {
+    padding: 20px;
+    padding-top: 100px;
+  }
+
 }
 
 
