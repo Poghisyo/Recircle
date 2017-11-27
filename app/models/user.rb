@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :materials
   has_many :purchases
+  has_many :chats
+  has_many :messages, through: :chats
 
   mount_uploader :photo, PhotoUploader
 
