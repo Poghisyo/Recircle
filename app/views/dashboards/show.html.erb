@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+  My Dashboard: Recircle
+<% end %>
+
 <div class="tabs">
   <% profile_active = 'active' if params['active'] == 'profile' || params['active'] == nil %>
   <%= link_to dashboard_path(active: 'profile'), class: "tab #{profile_active}" do %>
