@@ -4,7 +4,7 @@
 
 <% content_for :meta_title, "#{@material.title} on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @material.description %>
-<% content_for :meta_image, cl_image_path(@material.photo.path) %>
+<% content_for :meta_image, cl_image_path(@material.photo) %>
 
 
 <div class="container-home-zero-padding">
