@@ -30,6 +30,7 @@ class MaterialsController < ApplicationController
   end
 
   def show
+    @chat = Chat.new
     @material = Material.find(params[:id])
     @markers_map = Gmaps4rails.build_markers(@material) do |material, marker|
       marker.lat material.latitude
