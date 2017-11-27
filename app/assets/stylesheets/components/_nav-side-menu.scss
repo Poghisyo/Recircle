@@ -1,9 +1,9 @@
 .nav-side-menu{
-  color: white;
+  color: $blue-purple;
   height: 100vh;
-  background-color: $blue-purple;
+  background-color: white;
   a {
-    color: white;
+    color: $blue-purple;
   }
 }
 
@@ -16,9 +16,11 @@
 }
 
 .menu-list {
+      position: fixed;
+    max-width: 100px;
   ul {
     li {
-      margin: 10px 0;
+      margin: 35px 0;
       a {
 
         text-decoration: none;
@@ -26,20 +28,23 @@
           font-size: 17px;
           margin: 0;
           margin-top: 16px;
+          color: #36356b;
         }
         &:hover h5 {
       opacity: .5;
+      color: #36356b;
 }
         h6 {
+          color: #36356b;
           font-size: 15px;
           margin: 0;
           font-weight: 100;
-          opacity: 0.5;
+          // opacity: 0.5;
           text-decoration: none;
         }
 
       &:hover h6 {
-        opacity: 1;
+        opacity: .8;
 
       }
       }
@@ -95,4 +100,8 @@
 
 .hidden-xs .hidden-sm {
   visibility: hidden;
+}
+
+.nav-side-menu-home {
+  padding-left: 70px;
 }
