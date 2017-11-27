@@ -1,3 +1,4 @@
+
 <% content_for(:title_tag) do %>
   Recircle: Reduce, Reuse, Recircle
 <% end %>
@@ -10,6 +11,7 @@
       <div class ="side-nav-left hidden-xs hidden-sm">
         <%= render 'shared/nav-side-menu' %>
       </div>
+
       <div class="big-banner-top">
         <%= render 'shared/big-banner' %>
       </div>
@@ -22,21 +24,28 @@
     </div>
 
 
-<!-- side-nav -->
+    <!-- side-nav -->
 
-<!-- cards container -->
 
-  <div class="cards-container side-padding">
-    <div class="row">
-      <div id="card-title">
-      <h3 class="new-arrivals"><strong>New</strong>Arrivals</h3>
+    <div class="bottom-container">
+
+      <!-- cards container -->
+      <div class="cards-container cards-flex">
+        <div class="row">
+          <div id="card-title">
+            <h3 class="new-arrivals"><strong>New</strong>Arrivals</h3>
+          </div>
+          <% @three_materials.each do |material| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <%= render partial: 'shared/card', locals: { material: material } %>
+          </div>
+          <% end %>
+        </div>
+        <%= link_to 'See more', materials_path, class: "btn-order-home" %>
       </div>
-      <% @three_materials.each do |material| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= render partial: 'shared/card', locals: { material: material } %>
-      </div>
-      <% end %>
-    </div>
+
+
+
+
+
   </div>
-
-</div>

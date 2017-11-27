@@ -49,6 +49,7 @@
   }
   background-color: #fff;
   margin-bottom: 1rem;
+  border: .5px solid #eceaea;
 
 
   a {
@@ -234,4 +235,11 @@
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2);
+      }
+
+      .cards-flex {
+        padding: 0px 80px;
+        padding-left: 203px;
+        padding-bottom: 40px;
+        background-color:white;
       }

@@ -28,9 +28,11 @@
   <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
   <meta name="twitter:image:src" content="<%= meta_image %>">
 </head>
-<body>
+<body class="<%= params[:controller] %>-<%= params[:action] %>">
+
+
+
   <%= render 'shared/navbar' %>
-  <%= render 'shared/secondary_navbar' %>
   <%= render 'shared/flashes' %>
   <%= yield %>
 
@@ -43,7 +45,7 @@
 
 
   <%= yield(:after_js) %>
-
+<%= render 'shared/footer' %>
 
 </body>
 </html>
