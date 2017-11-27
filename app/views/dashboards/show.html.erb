@@ -56,6 +56,11 @@
       <h1>your materials ... under construction</h1>
       <%= link_to 'Post a new material', new_material_path, class: 'btn btn-primary' %>
     </div>
+
+    <% @materials.each do |material| %>
+      <%= render partial: 'shared/material-listing', locals: { material: material} %>
+    <% end %>
+
   </div>
 <% elsif params['active'] == 'messages'%>
   <div class="tab-content" id="messages">
