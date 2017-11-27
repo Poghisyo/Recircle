@@ -8,4 +8,3 @@ class PagesController < ApplicationController
     @three_materials = @materials.take(3)
   end
 end
-

@@ -173,9 +173,10 @@
 }
 
 .card__share {
-  float: right;
-  position: relative;
-  margin-top: -35px;
+  position: absolute;
+  top: 113px;
+  right: 0;
+  z-index: 9999;
 }
 
 .card__social {

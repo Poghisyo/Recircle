@@ -21,16 +21,13 @@
       </div>
     </div>
 
-
-<!-- side-nav -->
-
 <!-- cards container -->
 
   <div class="cards-container side-padding">
     <div class="row">
-      <div id="card-title">
+
       <h3 class="new-arrivals"><strong>New</strong>Arrivals</h3>
-      </div>
+
       <% @three_materials.each do |material| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <%= render partial: 'shared/card', locals: { material: material } %>
