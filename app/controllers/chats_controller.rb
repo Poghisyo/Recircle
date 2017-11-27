@@ -6,7 +6,18 @@ class ChatsController < ApplicationController
   end
 
   def create
-    chat = Chat.new(chats_params)
+    chat = Chat.where(chat_params)
+    chat = chat.last
+
+
+    byebug
+    unless chat
+      chat = Chat.new
+      chat.sender_id = chat_params[:sender_id]
+      chat.receiver_id = chat_params[:receiver_id]
+      chat.save
+    end
+    redirect_to 'show'
   end
 
   def destroy
@@ -14,6 +25,7 @@ class ChatsController < ApplicationController
 
   private
 
-  def chats_params
-   end
+  def chat_params
+    params.require(:chat).permit(:sender_id, :receiver_id)
+  end
 end
