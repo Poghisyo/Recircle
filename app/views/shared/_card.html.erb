@@ -2,6 +2,16 @@
   <div class="card__image border-tlr-radius">
     <div class="image-card order-tlr-radius" style="background-image: url('<%= cl_image_path(material.photo)%>');">
     <%= link_to "", material_path(material), class: "card-link"  %>
+
+          <div class="card__share">
+      <div class="card__social">
+        <a class="share-icon" href="#"><span class="fa fa-star"></span></a>
+        <a class="share-icon" href="#"><span class="fa fa-heart"></span></a>
+        <a class="share-icon" href="#"><span class="fa fa-share"></span></a>
+      </div>
+
+      <a id="share" class="share-toggle share-icon" href="#"></a>
+    </div>
     </div>
     <!-- linear-gradient(-225deg, rgba(40,40,40,0.6) 0%, rgba(40,40,40,0.6) 50%), -->
       <h2 class="card__text__image">
@@ -11,18 +21,12 @@
         <%= material.created_at.strftime("%b - %y") %>
       </p>
 
+
+
   </div>
 
   <div class="card__content card__padding">
-    <div class="card__share">
-      <div class="card__social">
-        <a class="share-icon" href="#"><span class="fa fa-star"></span></a>
-        <a class="share-icon" href="#"><span class="fa fa-heart"></span></a>
-        <a class="share-icon" href="#"><span class="fa fa-share"></span></a>
-      </div>
 
-      <a id="share" class="share-toggle share-icon" href="#"></a>
-    </div>
 
       <a
         href="#"><%= material.supplier %>
