@@ -28,10 +28,15 @@
             </div>
           </div>
           <div class="chat-messages">
-            <span> <%= message.content.first(200) %> </span>
-            <% if message.content.length > 200 %>
-              <span>[...]</span>
-            <% end %>
+            <div class="message-subject">
+              <%= message.subject %>
+            </div>
+            <div class="message-content">
+              <span> <%= message.content.first(200) %> </span>
+              <% if message.content.length > 200 %>
+                <span>[...]</span>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
