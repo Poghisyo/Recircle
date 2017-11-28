@@ -19,9 +19,9 @@
 }
 
 /**
- * Helpers
- */
- .border-tlr-radius {
+* Helpers
+*/
+.border-tlr-radius {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
@@ -34,9 +34,9 @@
 
 
 /**
- * Card Styles
- */
- .card {
+* Card Styles
+*/
+.card {
   height: 280px;
   display: flex;
   flex-direction: column;
@@ -192,55 +192,67 @@
 }
 .card__social--active {
   visibility: visible;
-        /*z-index: 3;*/
-        transform: translateZ(0);
-        transform: translateX(-48px);
-        transition: transform 0.35s ease;
-        opacity:0.9;
-      }
+      /*z-index: 3;*/
+      transform: translateZ(0);
+      transform: translateX(-48px);
+      transition: transform 0.35s ease;
+      opacity:0.9;
+    }
 
-      .share-toggle {
-        z-index: 2;
-        text-decoration: none;
-      }
-      .share-toggle:before {
-        content: "\f1e0";
-        font-family: 'FontAwesome';
-        color: $blue;
-      }
-      .share-toggle.share-expanded:before {
-        text-decoration: none;
-        content: "\f00d";
-      }
+    .share-toggle {
+      z-index: 2;
+      text-decoration: none;
+    }
+    .share-toggle:before {
+      content: "\f1e0";
+      font-family: 'FontAwesome';
+      color: $blue;
+    }
+    .share-toggle.share-expanded:before {
+      text-decoration: none;
+      content: "\f00d";
+    }
 
-      .share-icon {
-        text-decoration: none;
-        display: inline-block;
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        text-align: center;
-        border-radius: 50%;
-        background-color: #fff;
-        transition: all 0.3s ease;
-        outline: 0;
-        background-color: $yellow;
-        opacity: 1;
-        text-decoration: none;
-      }
-      .share-icon:hover,
-      .share-icon:focus {
-        text-decoration: none;
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
-      }
+    .share-icon {
+      text-decoration: none;
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      outline: 0;
+      background-color: $yellow;
+      opacity: 1;
+      text-decoration: none;
+    }
+    .share-icon:hover,
+    .share-icon:focus {
+      text-decoration: none;
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
 
-      .cards-flex {
-        padding: 0px 80px;
-        padding-left: 203px;
-        padding-bottom: 40px;
-        background-color:white;
+    .cards-flex {
+      padding: 0px 80px;
+      padding-left: 203px;
+      padding-bottom: 40px;
+      background-color:white;
+    }
+
+    .info-card {
+      height: 290px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0;
+      padding-top: 10px;
+      ul {
+        list-style: none;
       }
+    }

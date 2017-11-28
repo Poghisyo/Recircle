@@ -1,5 +1,5 @@
  <%= simple_form_for @chat, url: dashboard_chats_path do |f| %>
       <%= f.input :receiver_id, input_html: { value: @material.seller.id }, as: :hidden %>
       <%= f.input :sender_id, input_html: { value: current_user }, as: :hidden %>
-      <%= f.submit "chat", class: "btn-order" %>
+      <%= f.submit "Contact Supplier", class: "btn-order" %>
       <% end %>
