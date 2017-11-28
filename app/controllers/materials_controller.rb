@@ -34,7 +34,7 @@ def destroy
 
     flash.notice="Material '#{@material.title}' was deleted"
 
-    redirect_to dashboard_path(active: 'sales')
+    redirect_to dashboard_path(active: 'materials')
 end
 
 private
