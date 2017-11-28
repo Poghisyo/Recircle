@@ -49,6 +49,7 @@
   }
   background-color: #fff;
   margin-bottom: 1rem;
+  border: .5px solid #eceaea;
 
 
   a {
@@ -173,9 +174,10 @@
 }
 
 .card__share {
-  float: right;
-  position: relative;
-  margin-top: -35px;
+  position: absolute;
+  top: 113px;
+  right: 0;
+  z-index: 9999;
 }
 
 .card__social {
@@ -234,4 +236,11 @@
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2);
+      }
+
+      .cards-flex {
+        padding: 0px 80px;
+        padding-left: 203px;
+        padding-bottom: 40px;
+        background-color:white;
       }
