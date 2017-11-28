@@ -19,6 +19,13 @@ class PurchasesController < ApplicationController
     redirect_to dashboard_path(active: 'purchases')
   end
 
+  def destroy
+    @purchase=Purchase.find(params[:material_id])
+    @purchase.destroy
+
+    redirect_to dashboard_path(active: 'purchases')
+end
+
 
   private
 

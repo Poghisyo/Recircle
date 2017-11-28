@@ -7,15 +7,36 @@
   align-items: center;
   justify-content: flex-end;
   background-color: white;
+  .navbar-wagon-link {
+    color: $blue-purple;
+
+  }
+}
+
+.navbar-wagon-brand-dashboard {
+  margin: 0 60px;
+  img {
+    height: 50px;
+  }
+}
+
+.dashboards-show, .registrations-new {
+  .navbar-wagon {
+    justify-content: space-between !important;
+  }
 }
 
 .pages-home .navbar-wagon {
+
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   background-color: transparent !important;
+  .navbar-wagon-link {
+    color: white;
 
+  }
 }
 
 /* Logo */
@@ -50,7 +71,6 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: white;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
@@ -128,7 +148,7 @@
 .navbar-form-container {
   display: flex;
   .navbar-form {
-        border: .5px solid #36356b;
+    border: .5px solid #36356b;
     margin: 0;
     display: flex;
     // border: 1px solid #95A5A6;
