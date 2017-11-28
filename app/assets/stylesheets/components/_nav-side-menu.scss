@@ -1,6 +1,5 @@
 .nav-side-menu{
   color: $blue-purple;
-  height: 100vh;
   background-color: white;
   a {
     color: $blue-purple;
@@ -16,10 +15,19 @@
 }
 
 .menu-list {
-      position: fixed;
-    max-width: 100px;
+  height: 100vh;
+  position: fixed;
+  padding-left: 10px;
+  top: 0;
+  padding-top: 5px;
+  z-index: 9999999;
+  background-color: white;
+  width: 200px;
+
   ul {
     li {
+      max-width: 100px;
+
       margin: 35px 0;
       a {
 
@@ -31,9 +39,9 @@
           color: #36356b;
         }
         &:hover h5 {
-      opacity: .5;
-      color: #36356b;
-}
+          opacity: .5;
+          color: #36356b;
+        }
         h6 {
           color: #36356b;
           font-size: 15px;
@@ -43,19 +51,17 @@
           text-decoration: none;
         }
 
-      &:hover h6 {
-        opacity: .8;
+        &:hover h6 {
+          opacity: .8;
 
-      }
+        }
       }
     }
   }
-  padding-left: 10px;
   a {
     font-size:12px;
     font-weight: lighter;
   }
-  padding-top: 5px;
 }
 .menu-list ul li a:hover {
   opacity: 1;

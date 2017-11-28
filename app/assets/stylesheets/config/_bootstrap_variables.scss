@@ -50,7 +50,13 @@ $grid-gutter-width: 10px;
   padding: 0 !important;
 }
 
-
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-font-smoothing: antialiased;
+}
 
 
 
