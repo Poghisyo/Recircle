@@ -1,21 +1,46 @@
-<% @chats.each do |chat| %>
-<span>"Your chat with:"</span>
-<%= chat.sender.email %> <%= chat.sender.name %>
-<div>
-<% chat.messages.each do |message| %>
-<%=  message.content%>
-<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="chat col-xs-12">
+
+      <% @messages.each do |message| %>
+        <div class="message">
+          <div class="chat-sender">
+            <div class="sender-avatar">
+              <% if message.user.photo %>
+              <%= cl_image_tag message.user.photo, class: "avatar-large" %>
+              <% end %>
+            </div>
+            <div class="sender-info">
+              <div class="sender-name">
+                <%= message.user.first_name %>
+                <%= message.user.last_name %>
+              </div>
+              <div class="sender-mail">
+                <%= message.user.email %>
+              </div>
+              <div class="message-time">
+                <%= message.updated_at %>
+              </div>
+            </div>
+          </div>
+          <div class="chat-messages">
+            <span> <%= message.content.first(300) %> </span>
+            <% if message.content.length > 300 %>
+              <span>[...]</span>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+
+
+    </div>
+  </div>
 </div>
-<% end %>
+
+
 
 <h4>Sent messages</h4>
-<% @sent_chats.each do |chat| %>
-<span>"Your chat with:"</span>
-<%= chat.sender.email %> <%= chat.sender.name %>
-<div>
-<% chat.messages.each do |message| %>
-<%=  message.content%>
-<% end %>
-</div>
-<% end %>
+
 

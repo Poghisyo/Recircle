@@ -65,8 +65,7 @@
 <% elsif params['active'] == 'messages'%>
   <div class="tab-content" id="messages">
     <div class="text-center">
-      <h1>your messages ... under construction</h1>
-            <%= render 'messages/index', locals: {messages: @messages} %>
+      <%= render 'messages/index', locals: {messages: @messages} %>
     </div>
   </div>
 <% end %>
