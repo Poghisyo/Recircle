@@ -1,4 +1,4 @@
-<ul class="material-specs">
+<ul class="info-card">
 
   <li><h4><strong>
     <%= @material.title %>
@@ -23,7 +23,7 @@
       </span>
     </p>
   </li>
-    <li>
+ <!--    <li>
     <p>
       <span>
         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -34,7 +34,7 @@
       </div>
 
     </p>
-  </li>
+  </li> -->
   <li>
     <p>
       <span>
@@ -51,5 +51,8 @@
       <%=  @material.address %>
     </p>
   </li>
+  <div class="chat-form">
+        <%= render 'shared/chat-form' %>
+      </div>
 </ul>
 </ul>

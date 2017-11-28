@@ -1,4 +1,4 @@
-<div class="order-form">
+<div class="info-card">
 
   <h3>
     Total Price:
@@ -46,7 +46,7 @@
 
 
 
-  <%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post, class: "btn-order center padding-top" %>
+  <%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post, class: "btn-order center" %>
 
 
 </div>
