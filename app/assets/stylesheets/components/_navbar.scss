@@ -3,25 +3,29 @@
   background: white;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-      background-color: #36356b;
+  justify-content: flex-end;
+  background-color: white;
 }
 
 .pages-home .navbar-wagon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent !important;
 
 }
 
 /* Logo */
-.navbar-wagon-brand img {
-  height: 50px;
+.navbar-wagon-brand {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  img {
+    height: 50px;
+  }
 }
 
 /* User Avatar */
@@ -124,6 +128,7 @@
 .navbar-form-container {
   display: flex;
   .navbar-form {
+        border: .5px solid #36356b;
     margin: 0;
     display: flex;
     // border: 1px solid #95A5A6;
