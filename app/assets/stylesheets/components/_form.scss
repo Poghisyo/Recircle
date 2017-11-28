@@ -1,6 +1,9 @@
-.form-container {
-}
-
-.form-inputs{
-
+.container-form {
+  max-width: 600px;
+  margin: 20px auto;
+  input {
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid $blue-purple;
+  }
 }
