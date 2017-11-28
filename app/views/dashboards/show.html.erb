@@ -65,7 +65,8 @@
 <% elsif params['active'] == 'messages'%>
   <div class="tab-content" id="messages">
     <div class="text-center">
-      <h1>Inbox</h1>
+
+      <%= render 'messages/index', locals: {messages: @messages} %>
 
     </div>
     <% messages.each do |message| %>
