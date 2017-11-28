@@ -12,4 +12,3 @@ $(document).ready(function($) {
         $(this).toggleClass('share-expanded');
     });
 });
-

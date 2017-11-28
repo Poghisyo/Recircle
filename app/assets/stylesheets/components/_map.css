@@ -10,7 +10,7 @@
   height: 85vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 55px !important;
-  flex: 0 0 450px;
+  flex: 0 1 450px;
 }
 
 .map-materials-show {
