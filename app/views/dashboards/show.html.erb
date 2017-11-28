@@ -65,13 +65,9 @@
 <% elsif params['active'] == 'messages'%>
   <div class="tab-content" id="messages">
     <div class="text-center">
-
       <%= render 'messages/index', locals: {messages: @messages} %>
-
     </div>
-    <% messages.each do |message| %>
-      <%= render partial: 'shared/messages', locals: { message: message, user: sender_id}  %>
-  <% end %>
+
   </div>
 <% end %>
 
