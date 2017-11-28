@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resource :profile, except: [:new, :create, :destroy]# only: [:new, :create, :edit, :update]
   resource :dashboard, only: [:show] do
     resources :chats, except: [:new, :edit, :update] do
-      resources :messages, only: [:create, :new]
+      resources :messages, only: [:create, :new, :show]
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

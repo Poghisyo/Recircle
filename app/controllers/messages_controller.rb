@@ -13,6 +13,10 @@ class MessagesController < ApplicationController
     redirect_to dashboard_path(active: 'messages')
   end
 
+  def show
+    @message = Message.find(params[:id])
+  end
+
   private
 
   def message_params

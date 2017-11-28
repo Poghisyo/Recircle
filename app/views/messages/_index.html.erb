@@ -3,8 +3,11 @@
   <div class="row">
     <div class="chat col-xs-12">
 
+
       <% @messages.each do |message| %>
         <div class="message">
+
+          <%= link_to "", dashboard_chat_message_path(message.chat, message), class: "card-link"  %>
           <div class="chat-sender">
             <div class="sender-avatar">
               <% if message.user.photo %>
@@ -25,8 +28,8 @@
             </div>
           </div>
           <div class="chat-messages">
-            <span> <%= message.content.first(300) %> </span>
-            <% if message.content.length > 300 %>
+            <span> <%= message.content.first(200) %> </span>
+            <% if message.content.length > 200 %>
               <span>[...]</span>
             <% end %>
           </div>
