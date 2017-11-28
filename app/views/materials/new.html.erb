@@ -1,29 +1,57 @@
 <% content_for(:title_tag) do %>
-  Recircle: Create a new post
+Recircle: Create a new post
 <% end %>
 
-
-<h2>Post a new material for sale</h2>
-
 <%= simple_form_for(@material) do |f| %>
-  <%= f.error_notification %>
+<%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :user_id , as: :hidden%>
-    <%= f.input :title, required: true, autofocus: true %>
-    <%= f.input :category %>
-    <%= f.input :price %>
-    <%= f.input :condition %>
-    <%= f.input :quantity %>
-    <%= f.input :description %>
-    <%= f.input :source %>
-    <%= f.input :supplier %>
-    <%= f.input :address %>
-    <%= f.input :lead_time %>
-    <%= f.input :photo %>
-  </div>
+<div class="form-inputs">
+  <div class="container-form">
+    <div class="row">
+      <%= f.input :user_id , as: :hidden%>
+      <div class="col-xs-12">
+        <%= f.input :title, required: true, autofocus: true %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :category %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :price %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :quantity %>
+      </div>
+      <div class="col-xs-6">
+        <%= f.input :condition %>
+      </div>
+      <div class="col-xs-12">
+        <%= f.input :description %>
+      </div>
+      <div class="col-xs-4">
+        <%= f.input :source %>
+      </div>
+      <div class="col-xs-4">
+        <%= f.input :supplier %>
+      </div>
+      <div class="col-xs-4">
 
-  <div class="form-actions login-button">
-    <%= f.button :submit, "Post for sale", class: "btn btn-primary" %>
+        <%= f.input :lead_time %>
+      </div>
+      <div class="col-xs-12">
+        <%= f.input :address %>
+      </div>
+
+      <div class="col-xs-6">
+        <%= f.input :photo %>
+      </div>
+      <div class=" col-xs-6 form-actions login-button">
+        <%= f.button :submit, "Post for sale", class: "btn btn-primary" %>
+      </div>
+
+
+    </div>
   </div>
+</div>
+
+
 <% end %>
