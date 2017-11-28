@@ -1,0 +1,21 @@
+<% @chats.each do |chat| %>
+<span>"Your chat with:"</span>
+<%= chat.sender.email %> <%= chat.sender.name %>
+<div>
+<% chat.messages.each do |message| %>
+<%=  message.content%>
+<% end %>
+</div>
+<% end %>
+
+<h4>Sent messages</h4>
+<% @sent_chats.each do |chat| %>
+<span>"Your chat with:"</span>
+<%= chat.sender.email %> <%= chat.sender.name %>
+<div>
+<% chat.messages.each do |message| %>
+<%=  message.content%>
+<% end %>
+</div>
+<% end %>
+

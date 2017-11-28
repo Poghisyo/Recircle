@@ -1,2 +1,11 @@
 <h1>Chats#show</h1>
 <p>Find me in app/views/chats/show.html.erb</p>
+
+
+
+<p>Your messages with:</p> <%= @chat.receiver.email %>
+<% @messages.each do |message| %>
+  <%= message.sender %>
+  <%= message.content %>
+<% end %>
+
