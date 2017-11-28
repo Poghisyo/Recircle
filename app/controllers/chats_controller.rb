@@ -11,15 +11,16 @@ class ChatsController < ApplicationController
 
   def create
     chat = Chat.where(chat_params)
-    chat = chat.last
-    unless chat
-      chat = Chat.new
-      chat.sender_id = chat_params[:sender_id]
-      chat.receiver_id = chat_params[:receiver_id]
-      chat.save
+    @chat = chat.last
+    unless @chat
+      @chat = Chat.new
+      @chat.sender_id = chat_params[:sender_id]
+      @chat.receiver_id = chat_params[:receiver_id]
+      @chat.save
     end
-    @chat = chat
-    redirect_to new_dashboard_chat_message_path(chat)
+    # @chat = chat
+    @message = Message.new
+    redirect_to new_dashboard_chat_message_path(@chat, @message)
   end
 
   def destroy
