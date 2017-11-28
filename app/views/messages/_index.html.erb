@@ -28,10 +28,16 @@
             </div>
           </div>
           <div class="chat-messages">
-            <span> <%= message.content.first(200) %> </span>
-            <% if message.content.length > 200 %>
-              <span>[...]</span>
-            <% end %>
+            <div class="message-subject">
+              <p><%= message.subject %></p>
+
+            </div>
+            <div class="message-content">
+              <span> <%= message.content.first(200) %> </span>
+              <% if message.content.length > 200 %>
+                <span>[...]</span>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
@@ -41,9 +47,5 @@
     </div>
   </div>
 </div>
-
-
-
-<h4>Sent messages</h4>
 
 

@@ -34,7 +34,9 @@
 
   <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
+  <div class="all-content-yielded">
   <%= yield %>
+  </div>
 
 
   <%= javascript_include_tag "https://maps.google.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API_KEY']}" %>

@@ -12,3 +12,8 @@ $(document).ready(function($) {
         $(this).toggleClass('share-expanded');
     });
 });
+
+
+
+$(".alert" ).fadeOut(3000);
+
