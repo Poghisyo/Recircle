@@ -9,4 +9,17 @@ module ApplicationHelper
       false
     end
   end
+
+  def price_format(price)
+    string_price = price.to_s.reverse
+    result = ""
+    string_price.split('').each_slice(3).with_index do |slice, index|
+      if index == 0
+        result << "#{slice.flatten.join}"
+      else
+        result << ".#{slice.flatten.join}"
+      end
+    end
+    result.reverse
+  end
 end
