@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
     @user = current_user
     @purchases = Purchase.visible.where(buyer: current_user)
     @materials = Material.visible.where(seller: current_user)
+    @material = Material.new
 
     @chats = Chat.where(receiver: current_user)
     @sent_chats = Chat.where(sender: current_user)

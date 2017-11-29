@@ -30,6 +30,7 @@
     <%= link_to 'Messages', dashboard_path(active: 'messages'), class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to 'Wishlist', dashboard_path(active: 'wishlist'), class: "navbar-wagon-item navbar-wagon-link" %>
     <% else %>
+
       <%= link_to 'Sign in', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to 'Sign up', new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>

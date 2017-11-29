@@ -1,0 +1,67 @@
+
+<!-- Modal -->
+<div class="modal fade" id="add-material" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TitleExcessMaterial">Add Excess Material</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <%= simple_form_for(@material) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <div class="container-form">
+            <div class="row">
+              <%= f.input :user_id , as: :hidden%>
+              <div class="col-xs-12">
+                <%= f.input :title, required: true, autofocus: true %>
+              </div>
+              <div class="col-xs-6">
+                <%= f.input :category %>
+              </div>
+              <div class="col-xs-6">
+                <%= f.input :price %>
+              </div>
+              <div class="col-xs-6">
+                <%= f.input :quantity %>
+              </div>
+              <div class="col-xs-6">
+                <%= f.input :condition %>
+              </div>
+              <div class="col-xs-12">
+                <%= f.input :description %>
+              </div>
+              <div class="col-xs-4">
+                <%= f.input :source %>
+              </div>
+              <div class="col-xs-4">
+                <%= f.input :supplier %>
+              </div>
+              <div class="col-xs-4">
+
+                <%= f.input :lead_time %>
+              </div>
+              <div class="col-xs-12">
+                <%= f.input :address %>
+              </div>
+
+              <div class="col-xs-6">
+                <%= f.input :photo %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= f.button :submit, "Post for sale", class: "btn btn-primary" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
