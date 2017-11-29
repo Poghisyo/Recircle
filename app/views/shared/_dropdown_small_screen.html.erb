@@ -1,14 +1,11 @@
-<div class="nav-side-menu dropdown-toggle hidden-xs">
+  <div class="dropdown hidden-lg dropdown-small-screen">
+  <i class="fa fa-bars fa-2x" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+  <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
 
-  <div class="menu-list">
-      <a href="/" class="navbar-wagon-brand">
-    <img src=<%= image_path('logo-recircle.png') %> alt="logo">
-  </a>
-    <ul class="home-padding">
       <li class="dropdown ">
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 0,
           title: "Organic Materials",
           items: [
@@ -24,8 +21,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 1,
           title: "Construction Materials",
           items: [
@@ -40,8 +37,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 2,
           title: "Glass",
           items: [
@@ -55,8 +52,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 3,
           title: "Excess Food",
           items: [
@@ -69,8 +66,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 4,
           title: "Plastics",
           items: [
@@ -84,8 +81,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 5,
           title: "Paper",
           items: [
@@ -98,8 +95,8 @@
       <li>
 
         <%= render partial: 'shared/nav_side_menu_topic', locals: {
-          identifier: "full-screen",
-          state: "out",
+          identifier: "small-screen",
+          state: "in",
           number: 6,
           title: "Wood",
           items: [
@@ -109,9 +106,6 @@
           ]
         } %>
       </li>
-    </ul>
 
-  </div>
-
+  </ul>
 </div>
-
