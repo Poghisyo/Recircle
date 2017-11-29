@@ -1,10 +1,10 @@
-<a href="#menu-content" data-toggle="collapse" data-target="#menu-content<%= number %>">
+<a href="#menu-content" data-toggle="collapse" data-target="#menu-content<%= number %>-<%= identifier %>">
   <h5>
     <%= title %>
   </h5>
 </a>
 
-<ul id="menu-content<%= number %>" class="menu-content collapse out">
+<ul id="menu-content<%= number %>-<%= identifier %>" class="menu-content collapse <%= state %>">
   <% items.each do |item| %>
   <li>
     <%= link_to materials_path(active: 'location', material: item) do %>
