@@ -75,6 +75,30 @@
   font-weight: 200;
 }
 
+
+.btn-profile {
+    color: white;
+    background-color: #4d4c6c;
+    padding: 10px 20px;
+    border-radius: 1px;
+    font-size: 20px;
+    margin-top: 20px;
+
+    margin-right: 20px;
+}
+
+.btn-profile:hover {
+    color: white;
+    background-color: #4d4c6c;
+    padding: 10px 20px;
+    border-radius: 1px;
+    font-size: 20px;
+    margin-top: 20px;
+
+    margin-right: 20px;
+    text-decoration: none;
+    opacity: .8;
+
 .message-button {
   display: inline-flex;
   justify-content: center;
@@ -98,4 +122,5 @@ opacity: 0.4;
 .message-button.green {
 background-color: #3c763d;
 opacity: 0.4;
+
 }
