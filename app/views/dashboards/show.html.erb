@@ -61,6 +61,20 @@
     <% end %>
 
   </div>
+
+<% elsif params['active'] == 'wishlist'%>
+  <div class="tab-content" id="wishlist">
+    <div class="text-center">
+      <%= link_to 'Post a new material', new_material_path, class: 'btn btn-primary' %>
+    </div>
+
+    <% @favourites.each do |favourite| %>
+    <% material = Material.find(favourite.material_id) %>
+      <%= render partial: 'shared/material-listing', locals: { material: material} %>
+    <% end %>
+
+  </div>
+
 <% elsif params['active'] == 'messages'%>
   <div class="tab-content" id="messages">
     <div class="text-center">
