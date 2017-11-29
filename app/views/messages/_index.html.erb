@@ -33,9 +33,13 @@
 
             </div>
             <div class="message-content">
-              <span> <%= message.content.first(200) %> </span>
-              <% if message.content.length > 200 %>
-                <span>[...]</span>
+              <% if message.content %>
+                <% if message.content.length > 200 %>
+                  <span> <%= message.content.first(200) %> </span>
+                  <span>[...]</span>
+                <% else %>
+                  <span> <%= message.content %> </span>
+                <% end %>
               <% end %>
             </div>
           </div>
