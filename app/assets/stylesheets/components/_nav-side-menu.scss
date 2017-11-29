@@ -1,6 +1,7 @@
 .nav-side-menu{
   color: $blue-purple;
   background-color: white;
+
   a {
     color: $blue-purple;
   }
@@ -72,6 +73,8 @@
 
 .nav-side-menu ul,
 .nav-side-menu li {
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
   color: white;
   list-style: none;
   // margin: 0px;
