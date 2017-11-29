@@ -2,6 +2,6 @@
 meta_product_name: "Recircle"
 meta_title: "Recircle - Zero Waste"
 meta_description: "Reduce, Reuse, Recircle"
-meta_image: "Logo-recircle.png"
+meta_image: "cover.jpg"
 meta_fb_id: "312538282564454"                  # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
