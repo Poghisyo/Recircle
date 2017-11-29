@@ -20,8 +20,8 @@ class PurchasesController < ApplicationController
   end
 
   def destroy
-    @purchase=Purchase.find(params[:material_id])
-    @purchase.destroy
+    @purchase = Purchase.find(params[:id])
+    @purchase.update(hidden: true)
 
     redirect_to dashboard_path(active: 'purchases')
 end
