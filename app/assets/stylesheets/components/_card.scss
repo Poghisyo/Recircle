@@ -197,6 +197,7 @@
       transform: translateX(-48px);
       transition: transform 0.35s ease;
       opacity:0.9;
+      display: flex;
     }
 
     .share-toggle {
@@ -256,3 +257,7 @@
         list-style: none;
       }
     }
+
+#hidden-input {
+  display: none;
+}

@@ -5,8 +5,16 @@
 
           <div class="card__share">
       <div class="card__social">
+
+        <%= form_tag(controller: "favourites", action: "create", method: "post", class: "form-horizontal") do %>
+          <%= hidden_field_tag(:material_id, material.id) %>
+          <%= hidden_field_tag(:user_id, current_user.id) %>
+          <label for="hidden-input"><span class="fa fa-heart share-icon"></span></label>
+          <input id="hidden-input" name="commit" type="submit">
+        <% end %>
+
+
         <a class="share-icon" href="#"><span class="fa fa-star"></span></a>
-        <a class="share-icon" href="#"><span class="fa fa-heart"></span></a>
         <a class="share-icon" href="#"><span class="fa fa-share"></span></a>
       </div>
 
