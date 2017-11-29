@@ -11,7 +11,6 @@ class FavouritesController < ApplicationController
     @fav.user_id = current_user.id
     @fav.save!
     @material = Material.find(params[:material_id])
-    byebug
     redirect_to(:back)
     flash[:notice] = "#{@material.title} has been added to your wishlist"
   end
