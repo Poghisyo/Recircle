@@ -2,20 +2,15 @@
 
   <!-- <h2>Your profile details</h2> -->
 
-
-
-
-
-
   <div class="profile-content">
     <div class="profile-photo ">
       <% if @user.picture == nil %>
       <div class="avatar-extra-large" style="background-image:url('<%= cl_image_path @user.photo,
-          width: 400, height: 300, crop: :fill %>');"></div>
+      width: 400, height: 300, crop: :fill %>');"></div>
 
       <% else %>
-            <div class="avatar-extra-large" style="background-image:url('<%= image_path @user.picture,
-          width: 400, height: 400 %>');"></div>
+      <div class="avatar-extra-large" style="background-image:url('<%= image_path @user.picture,
+      width: 400, height: 400 %>');"></div>
 
       <% end %>
     </div>
@@ -81,21 +76,24 @@
         </div>
         <div class="profile-value">
          <h4> <%= @user.address %> </h4>
-        </div>
-      </div>
+       </div>
+     </div>
 
-      <div class="profile-element">
-        <div class="profile-attribute">
-          <h4>Description:</h4>
-        </div>
-        <div class="profile-value">
-          <h4>   <%= @user.description %></h4>
-        </div>
+     <div class="profile-element">
+      <div class="profile-attribute">
+        <h4>Description:</h4>
+      </div>
+      <div class="profile-value">
+        <h4>   <%= @user.description %></h4>
       </div>
     </div>
-
   </div>
-  <div class="actions">
-      <%= link_to 'Edit your Profile' , edit_profile_path, class: 'btn btn-profile' %>
-    </div>
+
+</div>
+<div class="actions">
+  <button type="button" class="btn btn-profile" data-toggle="modal" data-target="#EditProfile">
+    Edit your Profile
+  </button>
+  <%#= link_to 'Edit your Profile' , edit_profile_path, class: 'btn btn-profile' %>
+</div>
 </div>
