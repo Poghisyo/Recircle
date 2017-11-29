@@ -36,8 +36,9 @@
   font-weight: bold;
   min-width: 250px;
   h4{
-    font-weight: 400;
+    font-weight: bold;
     color: black;
+    font-size: 15px
   }
 }
 
@@ -47,8 +48,8 @@
   padding-right: 10%;
   line-height: 1.5;
   h4 {
-    opacity: .9;
-        color: #4E4D6D;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 15px
   }
 }
 

@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20171129103540) do
     t.integer  "receiver_id"
   end
 
+  create_table "favourites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "material_id"
+    t.index ["material_id"], name: "index_favourites_on_material_id", using: :btree
+    t.index ["user_id"], name: "index_favourites_on_user_id", using: :btree
+  end
+
   create_table "materials", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "title"
@@ -115,6 +122,8 @@ ActiveRecord::Schema.define(version: 20171129103540) do
   add_foreign_key "categories", "materials"
   add_foreign_key "chats", "users", column: "receiver_id"
   add_foreign_key "chats", "users", column: "sender_id"
+  add_foreign_key "favourites", "materials"
+  add_foreign_key "favourites", "users"
   add_foreign_key "materials", "users"
   add_foreign_key "messages", "chats"
   add_foreign_key "messages", "users"

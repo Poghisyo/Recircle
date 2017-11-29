@@ -2,8 +2,11 @@ require "cloudinary"
 include CloudinaryHelper
 
 puts 'cleaning database'
+Message.destroy_all
+Favourite.destroy_all
 Purchase.destroy_all
 Material.destroy_all
+Chat.destroy_all
 User.destroy_all
 
 

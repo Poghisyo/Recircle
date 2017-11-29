@@ -13,5 +13,6 @@ class FavouritesController < ApplicationController
     @material = Material.find(params[:material_id])
     redirect_to(:back)
     flash[:notice] = "#{@material.title} has been added to your wishlist"
+
   end
 end

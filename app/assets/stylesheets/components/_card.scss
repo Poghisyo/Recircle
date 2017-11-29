@@ -197,6 +197,7 @@
       transform: translateX(-48px);
       transition: transform 0.35s ease;
       opacity:0.9;
+      display: flex;
     }
 
     .share-toggle {
@@ -222,11 +223,12 @@
       text-align: center;
       border-radius: 50%;
       background-color: #fff;
+      background-color: $yellow;
       transition: all 0.3s ease;
       outline: 0;
-      background-color: $yellow;
       opacity: 1;
       text-decoration: none;
+      color: $blue;
     }
     .share-icon:hover,
     .share-icon:focus {
@@ -256,3 +258,7 @@
         list-style: none;
       }
     }
+
+#hidden-input {
+  display: none;
+}
