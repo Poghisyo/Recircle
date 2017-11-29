@@ -6,6 +6,7 @@ class Material < ApplicationRecord
   has_many :catergories
   validates :title, presence: true
 
+  scope :visible, -> { where(hidden: false) }
 
   geocoded_by :address
   mount_uploader :photo, PhotoUploader

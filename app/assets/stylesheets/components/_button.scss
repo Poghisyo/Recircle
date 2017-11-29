@@ -91,10 +91,11 @@
 }
 
 .message-button.red {
-background-color: $red;
+background-color: $yellow;
+opacity: 0.4;
 }
 
 .message-button.green {
-background-color: $green;
-
+background-color: #3c763d;
+opacity: 0.4;
 }
