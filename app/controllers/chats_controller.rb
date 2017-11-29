@@ -14,7 +14,7 @@ class ChatsController < ApplicationController
     @chat = chat.last
     unless @chat
       @chat = Chat.new
-      @chat.sender_id = chat_params[:sender_id]
+      @chat.sender_id = current_user.id
       @chat.receiver_id = chat_params[:receiver_id]
       @chat.save
     end
