@@ -56,3 +56,19 @@ align-items: center;
 .message-body p {
   margin: 6px 0;
 }
+
+
+.message-header {
+  background-color: $blue;
+  color: white;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-content {
+  border: 1px solid rgba(220,224,244,0.6);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

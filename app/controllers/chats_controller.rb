@@ -23,12 +23,19 @@ class ChatsController < ApplicationController
     redirect_to new_dashboard_chat_message_path(@chat, @message)
   end
 
+  def update
+    @chat = Chat.find(params[:chat_id])
+    # @chat = chat.last
+    @message = Message.new
+    redirect_to new_dashboard_chat_message_path(@chat, @message)
+  end
+
   def destroy
   end
 
   private
 
   def chat_params
-    params.require(:chat).permit(:sender_id, :receiver_id)
+    params.require(:chat).permit(:sender_id, :receiver_id, :chat_id)
   end
 end

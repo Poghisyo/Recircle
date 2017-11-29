@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resource :profile, except: [:new, :create, :destroy]# only: [:new, :create, :edit, :update]
   resource :dashboard, only: [:show] do
-    resources :chats, except: [:new, :edit, :update] do
+    resources :chats, except: [:new] do
       resources :messages, only: [:create, :new, :show]
     end
   end
