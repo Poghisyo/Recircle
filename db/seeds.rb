@@ -33,7 +33,7 @@ puts 'Creating 86 fake users with material...'
     "plastic bottles" => cl_image_path("plastic_bottle_upv8eo.jpg"),
     "rubber" => cl_image_path("rubber_jc0nky.jpg"),
     "industrial plastic" => cl_image_path("plastics_x653mc.jpg"),
-    "cardboard" => cl_image_tag("cardboard_l74yjb.jpg"),
+    "cardboard" => cl_image_path("cardboard_l74yjb.jpg"),
     "discarded paper" => cl_image_path("discarded_paper_xdmz9p.jpg"),
     "woodchips" => cl_image_path("woodchips_bc2sjp.jpg"),
     "unrefined wood" => cl_image_path("unrefined_wood_c7ozzv.jpg"),

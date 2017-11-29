@@ -56,6 +56,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   -webkit-font-smoothing: antialiased;
+  .all-content-yielded {
+    flex: 1 0 auto;
+  }
 }
 
 

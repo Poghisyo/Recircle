@@ -8,6 +8,10 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(220,224,244,0.4);
+  .actions {
+    display: flex;
+align-items: center;
+  }
 }
 .message:last-child {
   border-bottom: none;
@@ -22,6 +26,7 @@
 .message-name h3 {
   font-size: 13px;
   margin-bottom: 0px;
+  color: $blue-purple;
 }
 .message-name p {
   font-size: 13px;

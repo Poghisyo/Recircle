@@ -1,39 +1,30 @@
-<div class="listing-container">
-  <div class="row">
-    <div class="listing-body">
-        <div class="listing">
-          <div class="listing-image">
-            <% if material.photo? %>
-              <%= cl_image_tag material.photo, class: 'listing-photo'%>
-            <% else %>
-              <p>---- insert placeholder image here ---</p>
-            <% end %>
-          </div>
-          <div class="listing-name">
-            <h3><%= material.title %></h3>
-            <%= material.category %>
-          </div>
 
-          <div class="listing-description">
-            <%= material.description %>
-          </div>
+<div class="container">
+  <ul class="inbox">
+    <li class="message">
+      <div class="avatar-large">
+        <% if material.photo? %>
+        <%= cl_image_tag material.photo, class: "avatar-large"%>
+        <% else %>
+        <p>---- insert placeholder image here ---</p>
+        <% end %>
+      </div>
 
-          <div class="listing-price">
-            <h4>Price:</h4>
-            <p>
-              <strong><%= material.price %></strong> EUR
-            </p>
-          </div>
+      <div class="message-name">
+        <%= material.category %>
+      </div>
+      <div class="message-body">
+        <h3><%= material.title %></h3>
+        <h4><%= material.description %></h4>
+        <p><%= material.address %></p>
+      </div>
 
-          <div class="listing-info">
-            <h4>Location:</h4>
-            <p>
-              <%= material.address %>
-            </p>
-          </div>
+        <p class="price">
+          <strong><%= material.price %></strong> EUR
+        </p>
 
-          <%= link_to "view", material_path(material), class: "listing-link"  %>
-        </div>
-    </div>
-  </div>
+      <%= link_to "View", material_path(material), class: "listing-link"  %>
+      <%= link_to 'Delete', material_path(material), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
 </div>

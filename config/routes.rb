@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   #As Seller
 
-  resources :materials, only: [:index, :show, :new, :create]
+  resources :materials, only: [:index, :show, :new, :create, :destroy]
 
   #As Buyer
   resources :purchases, only: [:index, :new, :create]

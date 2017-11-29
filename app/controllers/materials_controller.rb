@@ -28,6 +28,15 @@ def create
   redirect_to dashboard_path(active: 'materials')
 end
 
+def destroy
+    @material=Material.find(params[:id])
+    @material.destroy
+
+    flash.notice="Material '#{@material.title}' was deleted"
+
+    redirect_to dashboard_path(active: 'materials')
+end
+
 private
 
 def set_map
