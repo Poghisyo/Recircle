@@ -12,5 +12,7 @@ class DashboardsController < ApplicationController
     @chats.order(updated_at: :desc).each do |chat|
       @messages += Message.where(chat_id: chat).order(updated_at: :desc)
     end
+
+    @favourites = Favourite.pluck(user_id: current_user)
   end
 end
