@@ -23,18 +23,6 @@
       </span>
     </p>
   </li>
- <!--    <li>
-    <p>
-      <span>
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </span>
-
-     <div class="chat-form">
-        <%= render 'shared/chat-form' %>
-      </div>
-
-    </p>
-  </li> -->
   <li>
     <p>
       <span>
@@ -52,7 +40,11 @@
     </p>
   </li>
   <div class="chat-form">
-        <%= render 'shared/chat-form' %>
-      </div>
+      <%= render partial: 'modal_contact_supplier' %>
+
+    <button type="button" class="btn btn-order" data-toggle="modal" data-target="#contact-supplier">
+      Contact Supplier
+    </button>
+  </div>
 </ul>
 </ul>

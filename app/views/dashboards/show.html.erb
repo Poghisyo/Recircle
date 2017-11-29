@@ -2,11 +2,15 @@
   My Dashboard: Recircle
 <% end %>
 
+<%= render partial: 'modal_edit_profile' %>
+<%= render partial: 'modal_add_material' %>
+
 <div class="tabs">
   <% profile_active = 'active' if params['active'] == 'profile' || params['active'] == nil %>
   <%= link_to dashboard_path(active: 'profile'), class: "tab #{profile_active}" do %>
       <h3>My profile</h3>
       <p>view my profile info</p>
+
   <% end %>
 
   <% materials_active = 'active' if params['active'] == 'materials' %>
@@ -42,6 +46,7 @@
   <div class="tab-content" id="profile">
     <div class="text-center">
       <%= render 'profiles/new-show', locals: { user: @user } %>
+
     </div>
   </div>
 <% elsif params['active'] == 'purchases'%>
@@ -52,9 +57,9 @@
   </div>
 <% elsif params['active'] == 'materials'%>
   <div class="tab-content" id="materials">
-    <div class="text-center">
-      <%= link_to 'Post a new material', new_material_path, class: 'btn btn-primary' %>
-    </div>
+    <button type="button" class="btn btn-profile" data-toggle="modal" data-target="#add-material">
+      Add Material
+    </button>
 
     <% @materials.each do |material| %>
       <%= render partial: 'shared/material-listing', locals: { material: material} %>
@@ -64,10 +69,6 @@
 
 <% elsif params['active'] == 'wishlist'%>
   <div class="tab-content" id="wishlist">
-    <div class="text-center">
-      <%= link_to 'Post a new material', new_material_path, class: 'btn btn-primary' %>
-    </div>
-
     <% @favourites.each do |favourite| %>
     <% material = Material.find(favourite.material_id) %>
       <%= render partial: 'shared/material-listing', locals: { material: material} %>
