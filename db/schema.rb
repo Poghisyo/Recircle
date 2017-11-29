@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20171128160558) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,11 +52,12 @@ ActiveRecord::Schema.define(version: 20171128160558) do
     t.integer  "price"
     t.integer  "quantity"
     t.integer  "lead_time"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.float    "latitude"
     t.float    "longitude"
     t.text     "description"
+    t.boolean  "hidden",      default: false, null: false
     t.index ["user_id"], name: "index_materials_on_user_id", using: :btree
   end
 
@@ -77,8 +80,9 @@ ActiveRecord::Schema.define(version: 20171128160558) do
     t.boolean  "insurance"
     t.integer  "shipping_cost"
     t.integer  "user_rating"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "hidden",        default: false, null: false
     t.index ["material_id"], name: "index_purchases_on_material_id", using: :btree
     t.index ["user_id"], name: "index_purchases_on_user_id", using: :btree
   end

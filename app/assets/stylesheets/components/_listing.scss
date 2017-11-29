@@ -48,8 +48,12 @@
 }
 
 .listing-status {
-  min-width: 150px;
+  min-width: 100px;
 }
+h4 {
+  font-size: 15px;
+}
+
 
 .status.accepted {
   color: $flat-green;

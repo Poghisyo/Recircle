@@ -7,14 +7,14 @@
   bottom: 20px;
 }
 
- .avatar-square:hover,
-    .avatar-square:focus {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
-    }
+.avatar-square:hover,
+.avatar-square:focus {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
 
 .profile-photo {
   width: 30px;
@@ -25,4 +25,14 @@
   border-radius: 50%;
   width: 70px;
   height: 70px;
+  background-size: cover;
+  background-position: center;
+}
+
+.avatar-extra-large {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
 }

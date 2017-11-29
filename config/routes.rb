@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resources :materials, only: [:index, :show, :new, :create, :destroy]
 
   #As Buyer
-  resources :purchases, only: [:index, :new, :create]
+  resources :purchases, only: [:index, :new, :create, :destroy]
 
   resources :favourites, only: [:new, :create, :index]
 end

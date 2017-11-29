@@ -1,7 +1,8 @@
 <div class="profile-container">
 
-  <h2>Your profile details</h2>
-  <%= link_to 'Edit your Profile' , edit_profile_path, class: 'btn btn-primary' %>
+  <!-- <h2>Your profile details</h2> -->
+
+
 
 
 
@@ -9,98 +10,92 @@
   <div class="profile-content">
     <div class="profile-photo ">
       <% if @user.picture == nil %>
-          <%= cl_image_tag(@user.photo,
-          width: 400, height: 300, crop: :fill) %>
+      <div class="avatar-extra-large" style="background-image:url('<%= cl_image_path @user.photo,
+          width: 400, height: 300, crop: :fill %>');"></div>
+
       <% else %>
-        <%= image_tag @user.picture,
-          width: 400, height: 400%>
+            <div class="avatar-extra-large" style="background-image:url('<%= image_path @user.picture,
+          width: 400, height: 400 %>');"></div>
+
       <% end %>
     </div>
 
     <div class="profile-infos">
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Full name:</p>
+          <strong> <h4>Full name:</h4></strong>
         </div>
         <div class="profile-value">
-          <%= @user.first_name %> <%= @user.last_name %>
+          <h4>  <%= @user.first_name %> <%= @user.last_name %></h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Recircle user name:</p>
+          <h4>Recircle user name:</h4>
         </div>
         <div class="profile-value">
-          <span>@</span><%= @user.user_name %>
+          <h4> <%= @user.user_name %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Age:</p>
+          <h4>Age:</h4>
         </div>
         <div class="profile-value">
-          <%= @user.age %>
+          <h4> <%= @user.age %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Description:</p>
+          <h4>Affiliated company:</h4>
         </div>
         <div class="profile-value">
-          <%= @user.description %>
+          <h4> <%= @user.company %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Affiliated company:</p>
+          <h4>email: </h4>
         </div>
         <div class="profile-value">
-          <%= @user.company %>
+          <h4> <%= @user.email %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>email: </p>
+          <h4>Phone number: </h4>
         </div>
         <div class="profile-value">
-          <%= @user.email %>
+          <h4> <%= @user.phone_number %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Phone number: </p>
+          <h4>Address: </h4>
         </div>
         <div class="profile-value">
-          <%= @user.phone_number %>
+         <h4> <%= @user.address %> </h4>
         </div>
       </div>
 
       <div class="profile-element">
         <div class="profile-attribute">
-          <p>Address: </p>
+          <h4>Description:</h4>
         </div>
         <div class="profile-value">
-          <%= @user.address %>
+          <h4>   <%= @user.description %></h4>
         </div>
       </div>
-
-      <div class="profile-element">
-        <div class="profile-attribute">
-          <p>Profile photo:</p>
-        </div>
-        <div class="profile-value">
-          <%= @user.photo %>
-        </div>
-      </div>
-
-
-
     </div>
+
   </div>
+  <div class="actions">
+      <%= link_to 'Edit your Profile' , edit_profile_path, class: 'btn btn-profile' %>
+    </div>
 </div>

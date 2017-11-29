@@ -30,7 +30,8 @@ end
 
 def destroy
     @material=Material.find(params[:id])
-    @material.destroy
+    # @material.destroy
+    @material.update(hidden: true)
 
     flash.notice="Material '#{@material.title}' was deleted"
 

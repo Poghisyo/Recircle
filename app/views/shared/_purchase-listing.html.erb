@@ -11,20 +11,19 @@
       </div>
 
       <div class="message-name">
-        <h3><%= material.title %></h3>
-        <%= material.category %>
-                <em>
+        <strong> <%= material.category %> </strong>
+                 <br> --
+                 <br>
           <%= material.address %>
-        </em>
       </div>
       <div class="message-body">
+         <h3><%= material.title %></h3>
         <%= material.description %>
-
       </div>
 
       <div class="listing-status">
         <h4 class="status pending"><%= purchase.status %></h4>
-        <p class="price"><strong><%= price_format(material.price) %></strong> EUR</p>
+        <p class="price"><strong><%= price_format(material.price) %>EUR</strong> </p>
       </div>
       <div class="actions">
 
@@ -32,7 +31,7 @@
         <i class="fa fa-eye"></i>
         <% end %>
         <br>
-        <%= link_to material_path(material), method: :delete, data: { confirm: 'Are you sure?' }, class: "message-button red" do %>
+        <%= link_to purchase_path(purchase), method: :delete, data: { confirm: 'Are you sure?' }, class: "message-button red" do %>
         <i class="fa fa-times"></i>
         <% end %>
       </div>

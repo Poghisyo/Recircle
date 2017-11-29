@@ -32,8 +32,12 @@
 }
 
 .tab.active {
-  background: $blue;
-  color: white;
+  // background: $blue;
+  // color: white;
+  background: white;
+  color: #35356C;
+  border-top: solid 0.5px #35356C;
+  border-bottom: solid 0.5px #35356C;
 }
 
 .tabs-sort {
