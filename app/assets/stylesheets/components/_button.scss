@@ -74,3 +74,27 @@
   padding-top: 20px;
   font-weight: 200;
 }
+
+.btn-profile {
+    color: white;
+    background-color: #4d4c6c;
+    padding: 10px 20px;
+    border-radius: 1px;
+    font-size: 20px;
+    margin-top: 20px;
+
+    margin-right: 20px;
+}
+
+.btn-profile:hover {
+    color: white;
+    background-color: #4d4c6c;
+    padding: 10px 20px;
+    border-radius: 1px;
+    font-size: 20px;
+    margin-top: 20px;
+
+    margin-right: 20px;
+    text-decoration: none;
+    opacity: .8;
+}
