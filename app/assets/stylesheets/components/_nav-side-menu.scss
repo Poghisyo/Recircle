@@ -71,10 +71,11 @@
 //   display: none;
 // }
 
-.nav-side-menu ul,
-.nav-side-menu li {
+.nav-side-menu ul {
   max-height: calc(100vh - 9rem);
   overflow-y: auto;
+ li {
+
   color: white;
   list-style: none;
   // margin: 0px;
@@ -96,6 +97,7 @@
             }
      }
 */
+}
 }
 
 

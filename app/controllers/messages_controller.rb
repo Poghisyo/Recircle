@@ -17,6 +17,20 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
   end
 
+  def edit
+    @chat = Chat.find(params[:chat_id])
+    @message = Message.new
+  end
+
+  def update
+    message = Message.new(message_params)
+    @chat = Chat.find(params[:chat_id])
+    message.chat = @chat
+    message.user = current_user
+    message.save
+    redirect_to dashboard_path(active: 'messages')
+  end
+
   private
 
   def message_params

@@ -1,1 +1,23 @@
-hello from the message show page
+<% content_for(:title_tag) do %>
+  Recircle: view messages on Recircle
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="message-header col-xs-12">
+      <div class="from">
+        <h4>From:</h4>
+        <%= @message.user.name %>
+        <%= @message.user.email %>
+      </div>
+      <div class="reply">
+        <%= button_to 'reply', {:controller => "chats", :action => "update", :chat_id => @message.chat_id, :user_id=> current_user} , :method=>:patch, class: "btn-red center" %>
+      </div>
+    </div>
+    <div class="message-content col-xs-12">
+      <%= @message.content %>
+    </div>
+  </div>
+</div>
+
