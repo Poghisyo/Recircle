@@ -10,21 +10,36 @@
         <% end %>
       </div>
 
-      <div class="message-name">
-        <%= material.category %>
+            <div class="message-name">
+        <strong> <%= material.category %> </strong>
+                 <br> --
+                 <br>
+          <%= material.address %>
       </div>
+
+
+
       <div class="message-body">
         <h3><%= material.title %></h3>
         <h4><%= material.description %></h4>
-        <p><%= material.address %></p>
+
       </div>
 
-        <p class="price">
-          <strong><%= material.price %>EUR</strong>
-        </p>
+      <p class="price">
+        <strong><%= material.price %>EUR</strong>
+      </p>
 
-      <%= link_to "View", material_path(material), class: "listing-link"  %>
-      <%= link_to 'Delete', material_path(material), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="actions">
+        <%= link_to  material_path(material), class: "message-button green" do  %>
+        <i class="fa fa-eye"></i>
+        <% end %>
+        <br>
+        <%= link_to material_path(material), method: :delete, data: { confirm: 'Are you sure?' }, class: "message-button red" do %>
+        <i class="fa fa-times"></i>
+        <% end %>
+      </div>
     </li>
   </ul>
 </div>
+
+
