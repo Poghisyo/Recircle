@@ -20,3 +20,9 @@ $(".alert" ).fadeOut(3000);
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
+
+document.querySelectorAll('.no-click').forEach(function(item) {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
+  })
+})
