@@ -21,8 +21,8 @@ puts 'Creating 86 fake users with material...'
 
   photos = {
     # "grass" => "https://static.pexels.com/photos/7174/summer-grass.jpg",
-    "grass" => cl_image_path("grass_jkmdtq.jpg"),
-    "flower cuttings" => cl_image_path("flower_cuttings_kg2cvs.jpg"),
+    "grass" => cl_image_path("grass-compressor_qtfn8v.jpg"),
+    "flower cuttings" => cl_image_path("flower_cuttings-compressor_wt5nxe.jpg"),
     "hedge trimmings" => cl_image_path("hedge_trimmings_dw9js7.webp"),
     "nails" => cl_image_path("construction_metals_jl0vug.jpg"),
     "wiring" => cl_image_path("wiring_ddyc2g.jpg"),
@@ -32,7 +32,7 @@ puts 'Creating 86 fake users with material...'
     "broken glassware" => cl_image_path("broken_glassware_icqiey.jpg"),
     "light bulbs" => cl_image_path("lightbulbs_x0hnu1.jpg"),
     "leftovers" => cl_image_path("leftovers_eixwvx.jpg"),
-    "organics" => cl_image_path("organics_eyqvz0.jpg"),
+    "organics" => cl_image_path("organics-compressor_mun1xm.jpg"),
     "plastic bottles" => cl_image_path("plastic_bottle_upv8eo.jpg"),
     "rubber" => cl_image_path("rubber_jc0nky.jpg"),
     "industrial plastic" => cl_image_path("plastics_x653mc.jpg"),
