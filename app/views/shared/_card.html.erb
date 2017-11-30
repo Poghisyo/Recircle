@@ -8,9 +8,8 @@
 
         <%= form_tag(controller: "favourites", action: "create", method: "post", class: "form-horizontal") do %>
           <%= hidden_field_tag(:material_id, material.id) %>
-
-          <label for="hidden-input"><span class="fa fa-heart share-icon"></span></label>
-          <input id="hidden-input" name="commit" type="submit">
+          <label for="hidden-input-<%= material.id %>"><span class="fa fa-heart share-icon"></span></label>
+          <input class="hidden-input" id="hidden-input-<%= material.id %>" name="commit" type="submit">
         <% end %>
 
 

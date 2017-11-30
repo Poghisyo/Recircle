@@ -1,9 +1,18 @@
-from: <%= @chat.sender.email %>
-to: <%= @chat.receiver.email %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      from: <%= @chat.sender.email %> <br/>
+      to: <%= @chat.receiver.email %>
 
-  <%= simple_form_for(@message, url: dashboard_chat_messages_path, html: { method: :post}) do |f| %>
-    <%= f.input :subject %>
-    <%= f.input :content %>
-    <%= f.submit "send message", class: "btn-order" %>
-  <% end %>
+      <%= simple_form_for(@message, url: dashboard_chat_messages_path, html: { method: :post}) do |f| %>
+      <%= f.input :subject %>
+      <%= f.input :content %>
+      <%= f.submit "send message", class: "btn-order" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
 
