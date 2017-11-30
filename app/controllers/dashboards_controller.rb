@@ -11,7 +11,7 @@ class DashboardsController < ApplicationController
 
     @messages = []
     @all_chats.each do |chat|
-    @messages += Message.where(chat_id: chat).order(updated_at: :desc)
+      @messages += Message.where(chat_id: chat).order(updated_at: :desc)
     end
 
     @favourites = Favourite.where(user_id: current_user)

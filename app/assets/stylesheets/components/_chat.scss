@@ -45,3 +45,19 @@
 .message-subject {
   font-weight: bold;
 }
+
+.sent-receive {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.sent {
+  background-color: $red;
+  color: white;
+}
+
+.received {
+  background-color: $flat-blue;
+  color: white;
+}
