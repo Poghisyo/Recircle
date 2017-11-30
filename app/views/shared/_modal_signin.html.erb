@@ -1,0 +1,30 @@
+
+<!-- Modal -->
+<div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="title-sign-in">Sign In Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, required: false, autofocus: true %>
+          <%= f.input :password, required: false %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+      <%= render "devise/shared/links" %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn login-button" data-dismiss="modal">Close</button>
+        <%= f.button :submit, "Log in", class: "btn btn-primary btn-block"%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

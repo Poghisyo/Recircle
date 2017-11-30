@@ -1,62 +1,59 @@
-
-<!-- dropping side-nav -->
-<!--  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown dropdown-menu-right">
-    <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-    </div>
-  </div> -->
-
-
-
-
-
-
 <div class="navbar-wagon">
   <!-- Logo -->
   <% if nav_filters %>
-     <a href="/" class="navbar-wagon-brand-dashboard">
+  <a href="/" class="navbar-wagon-brand-dashboard">
     <img src=<%= image_path 'logo-recircle.png' %> alt="logo">
   </a>
   <% end %>
 
-<%= render partial: 'shared/dropdown_small_screen' %>
+  <%= render partial: 'shared/dropdown_small_screen' %>
+  <div class="navbar-right-container">
+    <%= render 'shared/searchbar' %>
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-<%= render 'shared/searchbar' %>
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <% if user_signed_in? %>
+      <%= link_to 'Dashboard', dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Messages', dashboard_path(active: 'messages'), class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Wishlist', dashboard_path(active: 'wishlist'), class: "navbar-wagon-item navbar-wagon-link" %>
+      <% else %>
+      <%= render partial: 'shared/modal_signin' %>
+     <%= render partial: 'shared/modal_signup' %>
 
-    <% if user_signed_in? %>
-    <%= link_to 'Dashboard', dashboard_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to 'Messages', dashboard_path(active: 'messages'), class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to 'Wishlist', dashboard_path(active: 'wishlist'), class: "navbar-wagon-item navbar-wagon-link" %>
-    <% else %>
+      <button type="button" class="sign-in-button" data-toggle="modal" data-target="#sign-in">
+        Sign in
+      </button>
+      <button type="button" class="sign-in-button"  data-toggle="modal" data-target="#sign-up">
+        Sign up
+      </button>
 
-      <%= link_to 'Sign in', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to 'Sign up', new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <img src=<%= image_path('avatar.jpg') %> class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to 'Profile', dashboard_path(active: 'profile') %>
-          </li>
-          <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></li>
-        </ul>
+
+      <% end %>
+
+      <!-- Profile picture with dropdown list -->
+      <div class="navbar-wagon-item center-aligned-column">
+        <div class="dropdown">
+          <img src=<%= image_path('avatar.jpg') %> class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to 'Profile', dashboard_path(active: 'profile') %>
+            </li>
+            <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Messages</a></li>
-      </ul>
+    <!-- Dropdown appearing on mobile only -->
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Messages</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
