@@ -66,6 +66,29 @@ puts 'Creating 86 fake users with material...'
     "sawdust" => ["pine shavings", "horse stall bedding"]
   }
 
+description = {
+ "grass" => "In addition to doing all the things other biodegradable mulches do (retain soil moisture, block light to weeds, improve soil), grass clipping mulch contains so much nitrogen and potassium that it serves as a supplemental fertilizer.",
+ "flower cuttings" => "These are usually made up from combinations of peat moss, perlite, vermiculite, sand or similar materials. The primary role of a propagation medium is to provide support and moisture while the plant is developing. These requirements are quite different from those of a potting medium, which may have to sustain a mature or growing plant over a long period of time.",
+ "hedge trimmings" => "Save yourself the back ache and follow the steps in this video. Easier maintenance always begins with the proper tools. Lay down a drop cloth to avoid debris, and make sure you remove wayward branches. Doing the hedge trimming will be a snap from now on!",
+ "nails" => "6d Ring shank Copper Slating NailsThese Roofing nails are 2\" length made of .134\" (10 Gauge) RING shank Solid Copper. Large 3/8\" diameter flat head, regular diamond point. Ring shank nails, also known as annular thread, offer superior holding power in wood and plywood roof decks. For slate roofs choose correct nail length by adding one inch to twice the thickness of slates. Total 1 pound. Approximately 93 nails per pound.",
+ "wiring" => "Wire is a single electrical conductor, whereas a cable is a group of wires swathed in sheathing. The term cable originally referred to a nautical line of multiple ropes used to anchor ships, and in an electrical context, cables (like wires) are used to carry electrical currents.",
+ "machine parts" => "Brewer GE 2002 Golden Eagle Chamfer. We have 2 of these BRAND NEW machines in stock and ready for immediate delivery! (video may not be the exact machine listed for sale and is for illustration purposes only",
+ "rubble" => "Stabilized Decomposed Granite and Stabilized Crushed Stone are the most widely used natural alternatives to asphalt and concrete pathways. To us, having the heritage of creating the Stabilized category means being committed to always improving it. More stringent testing, soil particle size engineering, proprietary mixing procedures, and Stabilizer- the only patented natural soil binder, are just a few reasons why our Original Stabilized Decomposed Granite and Stabilized Crushed Stone are the most widely used natural alternatives for accessible pathways.",
+ "glass bottles" => "Different sizes of Cogelme Glass Crushers can process from 4 to 24 t/h of glass bottles. Thanks to high efficiency and low operating costs, for many years Cogelme Glass Crusher has been chosen and used by the main European glass bottles recyclers and glass factories.",
+ "broken glassware" => "When selecting glassware, determine the compatibility of the glassware with the chemicals or process.  Some chemicals react with glass or cause damage (etch) glass.  If your process involves temperature or pressure changes, ensure the glassware can withstand the changes.",
+ "light bulbs" => "Energy efficient light bulbs are a type of fluorescent lamp and can be recycled at local recycling centres. Older style 'incandescent' bulbs aren't recyclable and should be thrown away in your rubbish bin.",
+ "leftovers" => "Too Good To Go, an app operating in the UK, allows users to order leftover food at a discount from restaurants, according to the website. The goal is to help curb waste from establishments that typically toss out perfectly edible food at the end of the day.",
+ "organics" => "Organic sales encompasses those streams of revenue that are a direct result of the firm's existing operations. To generate external sales, the company would look for potential acquisition targets which would help increase top line growth.",
+ "plastic bottles" => "We offer a variety of individually priced and wholesale plastic bottles, from boston rounds, honey bear bottles, spice jars, drink bottles, and many more. Sizes range from small 1/2 oz. bottles to larger 2.5 gallon jugs.",
+ "rubber" => "You can recycle into other rubber products or to retread and resell. By taking advantage of these services, and a service stations' desire to remove old tires, you can recycle tires for a nice supplementary source of income.",
+ "industrial plastic" => "A vast inventory of used plastic granulators for crushing larger plastic materials and the recycling and reuse of plastic materials for a broad range of industry applications are available from Arlington Machinery." ,
+ "cardboard" => "Cheap used moving boxes and cardboard boxes for sale! UCB is the cheapest, easiest, and most earth-friendly way to get cardboard boxes and moving boxes.",
+ "discarded paper" => "This is the fibrous material used to make paper. Recovered material. Materials and byproducts that have known recycling potential, and that have been removed or diverted from solid waste, or that have never been discarded as solid waste and are intended for sale, use, reuse.",
+ "woodchips" => "Wood Chips are a great natural timber felling By-Product, ideal for various usage options, e.g.. - as an inexpensive, hard wearing surface for in/ outdoor riding arenas. - equine paddocks or cattle stand-off winter pads. - playground fall-protection. - garden mulch as an effective weed suppressive",
+ "unrefined wood" => "Unrefined wood is a common material that can be found by cutting down certain types of trees with a Matter Manipulator, axe, or pickaxe. It can be crafted into Wood Planks and, along with coal ore, can be used to make torches. ",
+ "sawdust" => "A wide variety of wood shavings machine for sale options are available to you, such as free samples, paid samples. ... Wood Sawdust Machine for Sale/Wood Shaving Machine for Horse Bedding/Sawdust",
+  }
+
   material = Material.new({
     seller: user,
     # category: Faker::Commerce.material,
@@ -75,7 +98,7 @@ puts 'Creating 86 fake users with material...'
     price: Faker::Number.between(20, 3000),
     supplier: Faker::Company.name,
     created_at: Faker::Date.between(20.days.ago, Date.today),
-    description: Faker::Lorem.paragraph,
+    description: description[category],
     # address: Faker::Address.city
     address: [
       "Leidsestraat 142, amsterdam",
