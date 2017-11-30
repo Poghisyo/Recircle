@@ -9,7 +9,35 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>build invoice here</p>
+
+        <div class="invoice-header">
+          <h2>INVOICE</h2>
+        </div>
+
+        <div class="invoice-infos">
+          <div class="invoice-billing">
+            <p>billed to:</p>
+            <%= current_user.name %>
+            <%= current_user.email %>
+            <%= current_user.phone_number %>
+          </div>
+          <div class="invoice-payment">
+            <p>payment by:</p>
+            <%= @material.seller.email %>
+
+          </div>
+          <div class="invoice-number">
+            <p>Ivoice details</p>
+            <p>invoice number: <%= rand(100000..900000) %></p>
+            <p>date of issue: <%= DateTime.now.strftime('%m/%d/%Y') %></p>
+          </div>
+        </div>
+
+        <div class="invoice-details">
+          <h3> <%= @material.title %> </h3>
+          <h4> <i class="fa fa-euro gray" aria-hidden="true"></i> <%= @material.price %> per kg</h4>
+        </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
