@@ -43,7 +43,6 @@
 }
 
 .pages-home .navbar-wagon {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +50,6 @@
   background-color: transparent !important;
   .navbar-wagon-link {
     color: white;
-
   }
 }
 
@@ -88,6 +86,7 @@
 
 /* Navbar link */
 .navbar-wagon-link {
+  color: black;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
