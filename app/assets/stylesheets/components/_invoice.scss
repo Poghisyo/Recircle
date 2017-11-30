@@ -1,0 +1,43 @@
+.invoice-header {
+  background-color: $blue;
+  color: $yellow;
+  margin: 20px;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+
+.invoice-number {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+
+.invoice-infos {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+
+.invoice-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+  .price {
+    margin-left: 20px;
+  }
+}
+
+.invoice-disclaimer {
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+}
+
+.btn-invoice {
+  margin-left: 10px;
+}
