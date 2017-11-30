@@ -1,0 +1,56 @@
+<!-- Modal -->
+<div class="modal fade" id="invoice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="title-excess-material">Material Invoice</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="invoice-header">
+          <h2>INVOICE</h2>
+        </div>
+
+        <div class="invoice-number">
+          <h5>Invoice details</h5>
+          <h4>invoice number: <%= rand(100000..900000) %></h4>
+          <h4>date of issue: <%= DateTime.now.strftime('%m/%d/%Y') %></h4>
+        </div>
+
+        <div class="invoice-infos">
+          <div class="invoice-billing">
+            <h5>billed to:</h5>
+            <%= current_user.name %>
+            <%= current_user.email %>
+            <%= current_user.phone_number %>
+          </div>
+          <div class="invoice-payment">
+            <h5>payment by:</h5>
+            <%= @material.seller.name %>
+            <%= @material.seller.email %>
+            <%= @material.seller.phone_number %>
+
+          </div>
+        </div>
+
+        <div class="invoice-details">
+          <h3> <%= @material.title %>:</h3>
+          <h3 class="price"> <i class="fa fa-euro gray" aria-hidden="true"></i> <%= @material.price %> per kg</h3>
+        </div>
+
+        <div class="invoice-disclaimer">
+          <p>-- Once payment has been completed, materials will be shipped within 24hr --</p>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post, class: "btn-invoice btn btn-primary" %>
+      </div>
+
+    </div>
+  </div>
+</div>

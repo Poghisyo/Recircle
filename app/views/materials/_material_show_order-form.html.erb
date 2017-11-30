@@ -44,9 +44,12 @@
     </li>
   </ul>
 
+    <%= render partial: 'modal_invoice' %>
 
+    <button type="button" class="btn-order center" data-toggle="modal" data-target="#invoice">
+      Buy Now!
+    </button>
 
-  <%= button_to 'Buy Now!', {:controller => "purchases", :action => "create", :material_id => @material.id, :user_id=> current_user} , :method=>:post, class: "btn-order center" %>
 
 
 </div>
