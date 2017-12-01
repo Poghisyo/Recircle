@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+
+  get '/pages/about', to: 'pages#about'
+
   resource :profile, except: [:new, :create, :destroy]# only: [:new, :create, :edit, :update]
   resource :dashboard, only: [:show] do
     resources :chats, except: [:new] do

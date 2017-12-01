@@ -7,4 +7,8 @@ class PagesController < ApplicationController
     @random_material = Material.order("RANDOM()").first
     @three_materials = @materials.take(3)
   end
+
+  def about
+
+  end
 end
