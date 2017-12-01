@@ -11,7 +11,11 @@
   border-bottom: 1px solid rgba(220,224,244,0.4);
   .actions {
     display: flex;
-align-items: center;
+    align-items: center;
+  }
+  .price {
+    flex: 0 0 75px;
+    white-space: nowrap;
   }
 }
 .message:last-child {
@@ -43,7 +47,7 @@ align-items: center;
     font-size: 20px;
     margin-top: 10px;
     font-weight: 600;
-        text-align: center;
+    text-align: center;
   }
   h4 {
     font-size: 13px;
@@ -72,7 +76,11 @@ align-items: center;
 }
 
 .message-content {
-  border: 1px solid rgba(220,224,244,0.6);
+  // border: 1px solid rgba(220,224,244,0.6);
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+#arrow{
+  font-size: 25px;
 }

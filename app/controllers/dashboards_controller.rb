@@ -1,7 +1,7 @@
 class DashboardsController < ApplicationController
   def show
     @user = current_user
-    @purchases = Purchase.visible.where(buyer: current_user)
+    @purchases = Purchase.visible.where(buyer: current_user).reverse
     @materials = Material.visible.where(seller: current_user)
     @material = Material.new
 
@@ -14,6 +14,6 @@ class DashboardsController < ApplicationController
       @messages += Message.where(chat_id: chat).order(updated_at: :desc)
     end
 
-    @favourites = Favourite.where(user_id: current_user)
+    @favourites = Favourite.where(user_id: current_user).reverse
   end
 end
