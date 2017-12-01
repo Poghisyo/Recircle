@@ -75,7 +75,7 @@ class MaterialsController < ApplicationController
     @address = params[:address]
     @material = params[:material]
     if !@address.blank? && !@material.blank?
-      @materials = Material.where(category: @material.downcase).where.not(latitude: nil, longitude: nil).near(@address, 20, order: true)
+      @materials = Material.where(category: @material.downcase).where.not(latitude: nil, longitude: nil).near(@address, 20)
     elsif !@address.blank?
       @materials = Material.where.not(latitude: nil, longitude: nil).near(@address, 20, order: false)
     elsif !@material.blank?
