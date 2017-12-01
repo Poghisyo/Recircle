@@ -48,7 +48,9 @@
   <!-- <div class="footer"> -->
   <div class="card__price">
     <div class="card__footer__left">
-      <p><%= material.price %> EUR/unit</p>
+
+      <p><%= price_format(material.price) %>  <i class="fa fa-euro gray" aria-hidden="true">
+      </i>/unit</p>
     </div>
     <div class="card__footer__right ">
       <img src=<%= image_path("add-to-cart.png")%> alt="image" class="avatar-square">

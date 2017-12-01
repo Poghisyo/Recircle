@@ -23,7 +23,10 @@
 
       <div class="listing-status">
         <h4 class="status pending"><%= purchase.status %></h4>
-        <p class="price"><strong><%= price_format(material.price) %>EUR</strong> </p>
+      <p class="price">
+        <strong><%= price_format(material.price) %> <span class="fa fa-euro gray" aria-hidden="true">
+      </span></strong>
+      </p>
       </div>
       <div class="actions">
 
